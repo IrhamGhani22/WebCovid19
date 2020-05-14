@@ -15,10 +15,10 @@
 
     <div class="content">
         <div class="row no-gutters">
-            <div class="col-md-6 ">
+            <div class="col-md-6 bgKiri">
                 <img class="bg-login" src="{{ URL::asset('/assets/image/bg-login.jpg')}}" alt="">
             </div>
-            <div class="col-md-6 ">
+            <div class="col-md-6 formKanan">
                 <div class="login">
                     <div class="h2 judul-login font-weight-bold text-center mb-5">LOGIN ADMIN</div>
                     <div class=" input-group mb-4 ml-auto mr-auto">

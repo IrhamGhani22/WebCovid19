@@ -161,3 +161,20 @@ a:hover {
 .fa-portrait {
     font-size: 20px;
 }
+
+.bgKiri,
+.formKanan {
+    opacity: 0;
+    transform: translate(-50px, 0);
+    transition: 1.5s;
+}
+
+.formKanan {
+    transform: translate(50px, 0);
+}
+
+.bgKiri.bgMuncul,
+.formKanan.formMuncul {
+    opacity: 1;
+    transform: translate(0, 0);
+}

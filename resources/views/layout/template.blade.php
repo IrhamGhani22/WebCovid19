@@ -22,7 +22,7 @@
             <a class="nav-item nav-link text-decoration-none font-weight-bold mr-2 ml-2 @yield('home')" href="{{url('/home')}}">HOME</a>
             <a class="nav-item nav-link font-weight-bold mr-2 ml-2 @yield('info')" href="#">INFO COVID</a>
             <a class="nav-item nav-link font-weight-bold mr-2 ml-2 @yield('report')" href="#">REPORT</a>
-            <a class="nav-item nav-link font-weight-bold mr-4 ml-2 @yield('about')" href="#">ABOUT US</a>
+            <a class="nav-item nav-link font-weight-bold mr-4 ml-2 @yield('about')" href="{{url('/about')}}">ABOUT US</a>
             <a class="nav-item nav-link font-weight-bold mr-2 btn-login text-white" href="{{url('/login')}}">LOGIN</a>
           </div>
         </div>

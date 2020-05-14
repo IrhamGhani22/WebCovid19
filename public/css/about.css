@@ -1,0 +1,368 @@
+body {
+    font-family: Century Gothic;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* CSS Navbar */
+
+.navbar {
+    background-color: #ffffff;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #39acfc;
+}
+
+a {
+    color: #39acfc;
+}
+
+a:hover {
+    color: #007abb;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #39acfc;
+}
+
+.btn-login {
+    background: #39acfc;
+    border-radius: 5px;
+}
+
+.navbar-toggler {
+    color: #39acfc;
+}
+
+
+/* Active */
+
+.aktif {
+    border-bottom: 3px solid #39acfc;
+}
+
+
+/* Efek Border dari Masuk Kemudian Keluar*/
+
+.sliding-underline {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 3px;
+}
+
+.sliding-underline:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    transition: width 0s ease, background .5s ease;
+}
+
+.sliding-underline:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background: #39acfc;
+    transition: width .5s ease;
+}
+
+.sliding-underline:hover:before {
+    width: 100%;
+    background: #39acfc;
+    transition: width .5s ease;
+}
+
+.sliding-underline:hover:after {
+    width: 100%;
+    background: transparent;
+    transition: all 0s ease;
+}
+
+
+/* CSS Content */
+
+.jumbotron {
+    background: rgb(255, 255, 255);
+    background-image: url("/assets/image/bg-about.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 80%;
+    background-size: 100%;
+    padding-bottom: 17.5%;
+    background-position: 0 -60px;
+}
+
+.gambar {
+    opacity: 0;
+    transform: translate(0, -50px);
+    transition: .5s;
+}
+
+.gambar.muncul {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.bgKiri,
+.formKanan {
+    opacity: 0;
+    transform: translate(-50px, 0);
+    transition: 1.5s;
+}
+
+.formKanan {
+    transform: translate(50px, 0);
+}
+
+.bgKiri.bgMuncul,
+.formKanan.formMuncul {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.stay {
+    border: 5px solid white;
+    width: 40%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    color: white;
+    margin-top: 2%;
+}
+
+.pKiri,
+.pKanan {
+    opacity: 0;
+    transform: translate(-50px, 0);
+    transition: 1.5s;
+}
+
+.pKanan {
+    transform: translate(50px, 0);
+}
+
+.pKiri.pMuncul,
+.pKanan.pMuncul {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.about {
+    min-height: 500px;
+}
+
+.team {
+    min-height: 700px;
+    background: #39acfc;
+}
+
+.contact {
+    min-height: 700px;
+}
+
+.judul {
+    color: #39acfc;
+}
+
+.judul2 {
+    color: #ffffff;
+}
+
+.line {
+    border: 1.5px solid #39acfc;
+    width: 30%;
+}
+
+.line2 {
+    border: 1.5px solid #ffffff;
+    width: 30%;
+}
+
+.foto {
+    width: 90%;
+}
+
+.desc {
+    width: 100%;
+    border: 5px solid white;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #39acfc;
+    opacity: 1;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #39acfc;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #39acfc;
+}
+
+.tombol {
+    background: #39acfc;
+    color: #ffffff;
+    border-radius: 0px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 1.5%;
+    border: 1px solid #ced4da;
+    color: #39acfc;
+}
+
+.form-input:focus {
+    width: 100%;
+    padding: 1.5%;
+    border: 1px solid #ced4da;
+    color: #39acfc;
+}
+
+footer {
+    width: 100%;
+    height: 70px;
+    background: #39acfc;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-top: 2%;
+}
+
+
+/* .team {
+    border: 5px solid #39acfc;
+    width: 28%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    color: #3bacfc;
+}
+
+.row {
+    width: 90%;
+}
+
+.bg-irham {
+    background-image: url("/assets/image/irham.jpg");
+    background-repeat: no-repeat;
+    width: auto;
+    height: auto;
+    background-size: 100%;
+    padding-bottom: 1%;
+    text-align: center;
+}
+
+.name-irham {
+    border: 5px solid white;
+    width: 70%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70%;
+}
+
+.bg-hafiizh {
+    background-image: url("/assets/image/hafiizh.jpeg");
+    background-repeat: no-repeat;
+    width: auto;
+    height: auto;
+    background-size: 100%;
+    padding-bottom: 1%;
+    text-align: center;
+}
+
+.name-hafiizh {
+    border: 5px solid white;
+    width: 70%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70%;
+}
+
+.bg-bama {
+    background-image: url("/assets/image/qyan.jpeg");
+    background-repeat: no-repeat;
+    width: auto;
+    height: auto;
+    background-size: 100%;
+    padding-bottom: 1%;
+    text-align: center;
+}
+
+.name-bama {
+    border: 5px solid white;
+    width: 70%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70%;
+}
+
+.contact {
+    background: #39acfc;
+    height: 800px;
+}
+
+.kontak {
+    border: 5px solid #ffffff;
+    width: 28%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    color: #ffffff;
+}
+
+.wadah {
+    width: 70%;
+    background: #ffffff;
+    padding: 5%;
+    border-radius: 10px;
+}
+
+.card {
+    color: #ffffff;
+    background: #39acfc;
+}
+
+.list-group-item {
+    background: #39acfc;
+    color: #ffffff;
+}
+
+.form-control {
+    border: 1px solid #39acfc;
+}
+
+.btn-color {
+    background: #39acfc;
+    color: white;
+    font-weight: bold;
+}
