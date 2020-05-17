@@ -19,7 +19,8 @@
     <div class="artikel">
       <span class="judul">CORONA VIRUS</span>
       <p class="konten mt-4 mb-4">Corona Virus adalah penyakit infeksi menular yang disebabkan oleh novel coronavirus atau virus corona jenis baru yang menyerang sistem pernapasan. Penyakit ini disebabkan karena infeksi virus ini disebut COVID-19. Virus Corona bisa menyebabkan gangguan ringan pada sistem pernapasan, infeksi paru-paru yang berat, hingga kematian.</p>
-      <button class="btn btn-covid">INFO COVID</button>
+      <a href="infoCovid.blade.php"><button class="btn btn-covid">INFO COVID</button></a>
+      <a href="" class="btn btn-covid">BERITA COVID</a>
     </div>
 </div>
 
