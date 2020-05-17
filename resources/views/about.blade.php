@@ -48,21 +48,21 @@
             </div>
         </div>
         <div class="row foto ml-auto mr-auto mt-2">
-            <div class="col-md-4 gambar">
+            <div class="col-md-4 gambar mb-3">
                 <img class="img-thumbnail" src="{{ URL::asset('/assets/image/irham.jpg')}}" alt="">
                 <div class="desc text-white mt-2">
                     <h2 class=" font-weight-bold text-center mr-auto ml-auto">IRHAM</h2>
                     <div class="h4 text-center ">FRONTEND DEVELOPER</div>
                 </div>
             </div>
-            <div class="col-md-4 gambar">
+            <div class="col-md-4 gambar mb-3">
                 <img class="img-thumbnail" src="{{ URL::asset('/assets/image/hafiizh.jpeg')}}" alt="">
                 <div class="desc text-white mt-2">
                     <h2 class=" font-weight-bold text-center mr-auto ml-auto">HAFIIZH</h2>
-                    <div class="h4 text-center ">BACKEND DEVELOPER</div>
+                    <div class="h4 text-center ">FULL-STUCK DEVELOPER</div>
                 </div>
             </div>
-            <div class="col-md-4 gambar">
+            <div class="col-md-4 gambar mb-3">
                 <img class="img-thumbnail" src="{{ URL::asset('/assets/image/bama.jpeg')}}" alt="">
                 <div class="desc text-white mt-2">
                     <h2 class=" font-weight-bold text-center mr-auto ml-auto">BAMA</h2>
@@ -99,7 +99,7 @@
                     <div class="form-group mt-4">
                         <textarea class="form-input font-weight-bold" placeholder="YOUR MESSAGE"></textarea>
                     </div>
-                    <button type="submit" class="btn tombol font-weight-bold">SEND</button>
+                    <button type="submit" class="btn tombol font-weight-bold mb-3">SEND</button>
                 </form>
             </div>
         </div>

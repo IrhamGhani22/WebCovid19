@@ -54,7 +54,9 @@
                          <input type="password" name="password" class=" form-control scr  " placeholder=" Password " aria-label=" Recipient 's password" aria-describedby="basic-addon2">
                      </div>
                      <button class="btn tombol-register font-weight-bold text-center mb-5">REGISTER</button>
-                     <div class="h6 font-weight-bold text-center">Have account ? <a class="text-decoration-none login" href="">Login</a></div>
+                     <div class="h6 font-weight-bold text-center">Have account ?
+                        <a class="text-decoration-none login" href="{{ url('/login') }}">Login</a>
+                    </div>
                 </div>
             </div>
         </div>
