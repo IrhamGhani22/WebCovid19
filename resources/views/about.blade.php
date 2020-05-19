@@ -10,6 +10,7 @@
 
 @section('home'  , 'sliding-underline')
 @section('info'  , 'sliding-underline')
+@section('berita', 'sliding-underline')
 @section('report', 'sliding-underline')
 
 @section('container')
@@ -59,7 +60,7 @@
                 <img class="img-thumbnail" src="{{ URL::asset('/assets/image/hafiizh.jpeg')}}" alt="">
                 <div class="desc text-white mt-2">
                     <h2 class=" font-weight-bold text-center mr-auto ml-auto">HAFIIZH</h2>
-                    <div class="h4 text-center ">FULL-STUCK DEVELOPER</div>
+                    <div class="h4 text-center ">FULL - STUCK DEVELOPER</div>
                 </div>
             </div>
             <div class="col-md-4 gambar mb-3">
@@ -69,6 +70,9 @@
                     <div class="h4 text-center ">BACKEND DEVELOPER</div>
                 </div>
             </div>
+           <a class="btn btn-warna font-weight-bold ml-auto mr-auto w-25 mb-4" href="{{url('/login')}}">
+                JOIN WITH US
+            </a>
         </div>
     </section>
 

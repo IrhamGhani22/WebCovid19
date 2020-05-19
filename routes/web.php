@@ -34,9 +34,26 @@ Route::get('/register', function () {
 Route::get('/about', function () {
     return view('about');
 });
-Route::get('/berita', function(){
-	return view('berita');
+
+Route::get('/berita', function () {
+    return view('berita');
 });
-Route::get('/tambahberita', function () {
-    return view('tambahberita');
+
+Route::get('/formBerita', function () {
+    return view('formBerita');
+});
+
+Route::get('/dashboardAdmin', function () {
+    return view('dashboardAdmin');
+});
+
+Route::get('/beritaAdmin', function () {
+    return view('beritaAdmin');
+});
+
+Route::get('/hospitalAdmin', function () {
+    return view('hospitalAdmin');
+});
+Route::get('/formHospital', function () {
+    return view('formHospital');
 });

@@ -8,6 +8,7 @@
 
 @section('home'  , 'sliding-underline')
 @section('info'  , 'sliding-underline')
+@section('berita', 'sliding-underline')
 @section('report', 'sliding-underline')
 @section('about' , 'sliding-underline')
 

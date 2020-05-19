@@ -108,11 +108,12 @@ a:hover {
     margin-top: 4.5%;
 }
 
-.pic{
+.pic {
     background-color: #39b1e5;
     margin-bottom: 2%;
 }
-.box{
+
+.box {
     padding: 20px 40px;
     border-radius: 5px;
 }
@@ -147,8 +148,23 @@ a:hover {
     border-radius: 20px;
 }
 
-.pos1{
+.pos1 {
     margin-top: 3.5%;
     margin-left: 7%;
     background-color: red;
+}
+
+footer {
+    width: 100%;
+    height: 70px;
+    background: #39acfc;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-top: 2%;
+    margin-top: 2%;
 }

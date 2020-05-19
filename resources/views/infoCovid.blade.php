@@ -9,6 +9,7 @@
 @section('info' , 'aktif')
 
 @section('home'  , 'sliding-underline')
+@section('berita', 'sliding-underline')
 @section('about'  , 'sliding-underline')
 @section('report', 'sliding-underline')
 
@@ -25,8 +26,8 @@
 					<div class="bg-danger box text-white">
 						<div class="row">
 							<div class="col-md-6">
-								<h5>Positif</h5>
-								<h3 id="terdampak">{{ $info['positif'] }}</h3>
+								<h5 >Positif</h5>
+								<h3 class="font-weight-bold" id="terdampak">{{ $info['positif'] }}</h3>
 								<h5>Orang</h5>
 							</div>
 							<div class="col-md-4">
@@ -41,7 +42,7 @@
 						<div class="row">
 							<div class="col-md-6">
 								<h5>Meninggal</h5>
-								<h3 id="mati">{{ $info['meninggal'] }}</h3>
+								<h3 class="font-weight-bold" id="mati">{{ $info['meninggal'] }}</h3>
 								<h5>Orang</h5>
 							</div>
 							<div class="col-md-4">
@@ -56,7 +57,7 @@
 						<div class="row">
 							<div class="col-md-6">
 								<h5>Sembuh</h5>
-								<h3 id="sembuh">{{ $info['sembuh'] }}</h3>
+								<h3 class="font-weight-bold" id="sembuh">{{ $info['sembuh'] }}</h3>
 								<h5>Orang</h5>
 							</div>
 							<div class="col-md-4">
@@ -70,11 +71,23 @@
 					<div class="bg-primary box text-white">
 						<div class="row">
 							<div class="col-md-10">
-								<h2 class="pt-3 pb-2">{{ $info['name'] }}</h2>
+								<h2 class="pt-3 pb-2 font-weight-bold">{{ $info['name'] }}</h2>
 								<h5 id="data-id">
-									Positif : <br>
-									Meninggal : <br>
-									Sembuh :
+									<div class="row no-gutters">
+										<div class="col-md-2">Positif</div>
+										<div class="col-md-1">:</div>
+										<div class="col-md-9"></div>
+									</div>
+									<div class="row no-gutters">
+										<div class="col-md-2">Meninggal</div>
+										<div class="col-md-1">:</div>
+										<div class="col-md-9"></div>
+									</div>
+									<div class="row no-gutters">
+										<div class="col-md-2">Sembuh</div>
+										<div class="col-md-1">:</div>
+										<div class="col-md-9"></div>
+									</div>
 								</h5>
 							</div>
 							<div class="col-md-2">
@@ -86,8 +99,12 @@
 			</div>
 		</div>
 	@endforeach
-	<footer class="bg-primary text-center text-white mt-3 pt-2 pb-2">
-		Created By XI-RPL 2 SMKN 4 Bandung
-	</footer>
+    <footer>
+        <div class="container">
+            <div class="row copyright">
+                <p class="font-weight-bold "><i class=" far fa-copyright "></i> 2020 COVID19-INFO | All Rights Reserved </p>
+            </div>
+        </div>
+    </footer>
 @endsection
 

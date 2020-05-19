@@ -251,118 +251,12 @@ footer {
     padding-top: 2%;
 }
 
-
-/* .team {
-    border: 5px solid #39acfc;
-    width: 28%;
-    padding-bottom: 1%;
-    padding-top: 1%;
-    color: #3bacfc;
+.btn-warna {
+    background-color: white;
+    color: #39acfc;
 }
 
-.row {
-    width: 90%;
-}
-
-.bg-irham {
-    background-image: url("/assets/image/irham.jpg");
-    background-repeat: no-repeat;
-    width: auto;
-    height: auto;
-    background-size: 100%;
-    padding-bottom: 1%;
-    text-align: center;
-}
-
-.name-irham {
-    border: 5px solid white;
-    width: 70%;
-    padding-bottom: 1%;
-    padding-top: 1%;
-    color: white;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 70%;
-}
-
-.bg-hafiizh {
-    background-image: url("/assets/image/hafiizh.jpeg");
-    background-repeat: no-repeat;
-    width: auto;
-    height: auto;
-    background-size: 100%;
-    padding-bottom: 1%;
-    text-align: center;
-}
-
-.name-hafiizh {
-    border: 5px solid white;
-    width: 70%;
-    padding-bottom: 1%;
-    padding-top: 1%;
-    color: white;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 70%;
-}
-
-.bg-bama {
-    background-image: url("/assets/image/qyan.jpeg");
-    background-repeat: no-repeat;
-    width: auto;
-    height: auto;
-    background-size: 100%;
-    padding-bottom: 1%;
-    text-align: center;
-}
-
-.name-bama {
-    border: 5px solid white;
-    width: 70%;
-    padding-bottom: 1%;
-    padding-top: 1%;
-    color: white;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 70%;
-}
-
-.contact {
-    background: #39acfc;
-    height: 800px;
-}
-
-.kontak {
-    border: 5px solid #ffffff;
-    width: 28%;
-    padding-bottom: 1%;
-    padding-top: 1%;
-    color: #ffffff;
-}
-
-.wadah {
-    width: 70%;
-    background: #ffffff;
-    padding: 5%;
-    border-radius: 10px;
-}
-
-.card {
-    color: #ffffff;
-    background: #39acfc;
-}
-
-.list-group-item {
-    background: #39acfc;
-    color: #ffffff;
-}
-
-.form-control {
-    border: 1px solid #39acfc;
-}
-
-.btn-color {
-    background: #39acfc;
-    color: white;
-    font-weight: bold;
+.btn-warna:hover {
+    background-color: white;
+    color: #39acfc;
 }
