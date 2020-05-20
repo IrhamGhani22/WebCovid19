@@ -23,8 +23,10 @@
 			<tr>
 				<th>No</th>
 				<th>Foto</th>
-				<th>Judul</th>
-                <th>Berita</th>
+                <th>Judul</th>
+                <th>Pengirim</th>
+                <th>Tanggal</th>
+                <th class="berita">Berita</th>
                 <th class="aksi">Action</th>
 			</tr>
 		</thead>
@@ -32,8 +34,10 @@
             @foreach ($berita as $row)
 			<tr>
                 <td>{{ $loop->iteration }}</td>     
-                <td>{{ $row->img }}</td>
+                <td> <img src="{{asset('assets/image/'.$row->file)}}" alt="" width="100" height="100"> </td>
                 <td>{{ $row->Judul }}</td>
+                <td>{{ $row->Pengirim}}</td>
+                <td>{{ $row->Tanggal}}</td>
                 <td>{{ $row->Isi }}</td>
                 <td>
                     <div class="row no-gutters">

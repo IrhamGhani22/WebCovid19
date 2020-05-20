@@ -8,8 +8,22 @@
     
 @section('container')
 
+<?php
+
+$action = 'input';
+$title = '  <i class="fas fa-plus-square ml-4"></i> INPUT BERITA';
+
+if (!empty($berita)){
+
+$action = 'edit';
+$title = ' <i class=" fas fa-edit ml-4 "></i> EDIT BERITA';
+}
+?>
+
 <div class="col-md-10 content">
-    <h1 class="judul mt-2 ml-2 text-dark"><i class="fas fa-plus-square ml-4"></i> ADD BERITA </h1>
+    <h1 class="judul mt-2 ml-2 text-dark">
+        <?= $title ?>
+    </h1>
     <hr class="line">
 
     <div class="card border-dark ml-auto mr-auto" ">
@@ -43,7 +57,7 @@
                         </div>
                         <div class="form-group">
                             <label for="">Tanggal</label>
-                            <input type="date" class="form-control" name="Tanggal">
+                            <input type="date" class="form-control" name="Tanggal" value="{{ old('Tanggal', @$berita->Tanggal) }}">
                         </div>
                         <div class="form-group">
                             <label for="">Isi Berita</label>
@@ -54,10 +68,20 @@
                     
                     <div class="col-md-6">
                         <div class="form-group">
-                            <div class="box ml-auto mr-auto mb-3">
+
+                            <input type="file" name="file" id="chooseFile" class="form-control-file add " >
+                            <?php if ($action == "edit") { ?>
+                                <img id="preview" class="img-edit"  src="{{asset('assets/image/'.$berita->file)}}" alt="" width="358" height="358">
+                                <input type="hidden" name="file" id="chooseFile" class="form-control-file " value="{{old('file', $berita->file)}}">
+                            <?php } ?>
+                            <div class="box ml-auto mr-auto">
+                                <img id="preview" src="{{asset('assets/image/no-image.jpg')}}" alt="" width="358" height="358">
+                            </div>
+
+                            {{-- <div class="box ml-auto mr-auto mb-3">
                                 <img id="preview" src="{{asset('/assets/image/no-image.jpg')}}" alt="" width="358" height="358">
                             </div>
-                            <input type="file" id="chooseFile" class="form-control-file">
+                            <input type="file" name="file" id="chooseFile" class="form-control-file"> --}}
                         </div>
                     </div>
                 </div>

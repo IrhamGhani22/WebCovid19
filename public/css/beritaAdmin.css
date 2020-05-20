@@ -136,5 +136,9 @@ label input[type="search"] {
 }
 
 .aksi {
-    width: 15%;
+    width: 12%;
+}
+
+.berita {
+    width: 30%;
 }

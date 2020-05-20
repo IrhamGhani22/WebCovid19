@@ -128,3 +128,17 @@ body {
 .form-control-file {
     margin-left: 14%;
 }
+
+.img-edit {
+    position: absolute;
+    top: 0;
+    margin-top: 32px;
+    margin-bottom: 10px;
+    margin-left: 76px;
+}
+
+.add {
+    position: absolute;
+    top: 400px;
+    left: 4px;
+}

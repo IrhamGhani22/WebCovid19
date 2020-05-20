@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2020 at 08:16 AM
--- Server version: 10.4.6-MariaDB
--- PHP Version: 7.3.8
+-- Waktu pembuatan: 20 Bulan Mei 2020 pada 17.42
+-- Versi server: 10.4.6-MariaDB
+-- Versi PHP: 7.3.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `failed_jobs`
+-- Struktur dari tabel `failed_jobs`
 --
 
 CREATE TABLE `failed_jobs` (
@@ -40,7 +40,7 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `migrations`
+-- Struktur dari tabel `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -50,7 +50,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `migrations`
+-- Dumping data untuk tabel `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
@@ -60,31 +60,32 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `t_berita`
+-- Struktur dari tabel `t_berita`
 --
 
 CREATE TABLE `t_berita` (
   `id` int(11) NOT NULL,
   `Judul` varchar(255) NOT NULL,
   `Headline` varchar(255) NOT NULL,
-  `img` varchar(255) DEFAULT NULL,
+  `file` varchar(255) DEFAULT NULL,
   `Isi` varchar(255) NOT NULL,
   `Pengirim` varchar(255) NOT NULL,
-  `Tanggal` date NOT NULL
+  `Tanggal` date NOT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `t_berita`
+-- Dumping data untuk tabel `t_berita`
 --
 
-INSERT INTO `t_berita` (`id`, `Judul`, `Headline`, `img`, `Isi`, `Pengirim`, `Tanggal`) VALUES
-(1, 'PSBB Jawa Barat, Angka Kasus COVID-19 Turun', 'kasus covid-19 turun', '', 'JAKARTA - Ketua Gugus Tugas Percepatan Penanganan COVID-19 Daerah Jawa Barat, Ridwan Kamil melaporkan bahwa Pembatasan Sosial Berskala Besar (PSBB) yang dilakukan Pemerintah Provinsi Jawa Barat di wilayahnya dapat menurunkan kurva kasus COVID-19.\r\n\r\n“Sebe', 'TIM KOMUNIKASI PUBLIC', '2020-05-16'),
-(2, 'Sukardi Ajak Warga Panen Sayur dan Ikan Segar di Tengah Pandemi', 'Panen sayur', '', 'JAKARTA – Di tengah situasi pandemi, sebagian warga merasa jenuh atau tertekan dengan beraktivitas di rumah. Menyeimbangkan kesehatan fisik dan mental, aktivitas seorang warga bernama Sukardi bisa menjadi salah satu upaya tersebut. \r\n\r\nSukardi, seorang wa', 'TIM AITI', '2020-05-16');
+INSERT INTO `t_berita` (`id`, `Judul`, `Headline`, `file`, `Isi`, `Pengirim`, `Tanggal`, `updated_at`, `created_at`) VALUES
+(1, 'PSBB Jawa Barat, Angka Kasus COVID-19 Turun', 'kasus covid-19 turun', '1589985375_8.PNG', 'JAKARTA - Ketua Gugus Tugas Percepatan Penanganan COVID-19 Daerah Jawa Barat, Ridwan Kamil melaporkan bahwa Pembatasan Sosial Berskala Besar (PSBB) yang dilakukan Pemerintah Provinsi Jawa Barat di wilayahnya dapat menurunkan kurva kasus COVID-19.\r\n\r\n“Sebe', 'TIM KOMUNIKASI PUBLIC', '2020-05-16', '2020-05-20 07:36:15', NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `t_login`
+-- Struktur dari tabel `t_login`
 --
 
 CREATE TABLE `t_login` (
@@ -96,7 +97,7 @@ CREATE TABLE `t_login` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `t_rujuk`
+-- Struktur dari tabel `t_rujuk`
 --
 
 CREATE TABLE `t_rujuk` (
@@ -110,7 +111,7 @@ CREATE TABLE `t_rujuk` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Struktur dari tabel `users`
 --
 
 CREATE TABLE `users` (
@@ -129,78 +130,78 @@ CREATE TABLE `users` (
 --
 
 --
--- Indexes for table `failed_jobs`
+-- Indeks untuk tabel `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `migrations`
+-- Indeks untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `t_berita`
+-- Indeks untuk tabel `t_berita`
 --
 ALTER TABLE `t_berita`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `t_login`
+-- Indeks untuk tabel `t_login`
 --
 ALTER TABLE `t_login`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `t_rujuk`
+-- Indeks untuk tabel `t_rujuk`
 --
 ALTER TABLE `t_rujuk`
   ADD PRIMARY KEY (`id_rujuk`);
 
 --
--- Indexes for table `users`
+-- Indeks untuk tabel `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `failed_jobs`
+-- AUTO_INCREMENT untuk tabel `failed_jobs`
 --
 ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `migrations`
+-- AUTO_INCREMENT untuk tabel `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `t_berita`
+-- AUTO_INCREMENT untuk tabel `t_berita`
 --
 ALTER TABLE `t_berita`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `t_login`
+-- AUTO_INCREMENT untuk tabel `t_login`
 --
 ALTER TABLE `t_login`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `t_rujuk`
+-- AUTO_INCREMENT untuk tabel `t_rujuk`
 --
 ALTER TABLE `t_rujuk`
   MODIFY `id_rujuk` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
