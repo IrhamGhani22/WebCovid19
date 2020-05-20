@@ -10,7 +10,7 @@
 
 <div class="col-md-10 content">
     <h1 class="judul mt-2 ml-2 text-dark"><i class="fas fa-newspaper ml-4"></i> BERITA
-    <a class="btn btn-outline-dark tombol" href="{{url('/formBerita')}}">
+    <a class="btn btn-outline-dark tombol" href="{{url('/beritaAdmin/create')}}">
        <h4 class="d-inline">
            <i class="fas fa-plus"></i>
        </h4> 
@@ -25,57 +25,35 @@
 				<th>Foto</th>
 				<th>Judul</th>
                 <th>Berita</th>
-                <th>Action</th>
+                <th style="width: 20%">Action</th>
 			</tr>
 		</thead>
-		<tbody>
+        @foreach ($berita as $row)
+        <tbody>
 			<tr>
-				<td>1</td>
-				<td>covid.jpg</td>
-				<td>Konspirasi Covid19</td>
-                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ut impedit natus cum, at ullam asperiores architecto ad molestias fuga, minima dolorum fugiat itaque ratione accusantium laudantium inventore quaerat rem.</td>
+                <td>{{ $loop->iteration }}</td>     
+                <td>{{ $row->img }}</td>
+                <td>{{ $row->Judul }}</td>
+                <td>{{ $row->Isi }}</td>
                 <td>
-                    <button class="btn btn-success "><i class="fas fa-edit text-white"></i></button>
-                </td>
+                    <div class="row no-gutters">
+                        <div class="col-md-6 no-gutters text-center mt-2">
+                            <a href="{{ url('/beritaAdmin/' . $row->id . '/edit') }}" class="btn btn-success">
+                                <i class="far fa-edit text-white"></i>
+                            </a>
+                        </div>
+                        <div class="col-md-6 no-gutters text-center mt-2">
+                            <form action="{{ url('/beritaAdmin',$row->id) }}" method="POST">
+                            @method('DELETE')
+                            @csrf
+                            <button type="submit" class="btn btn-danger "><i class="fas fa-trash text-white"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </td>    
             </tr>
-            <tr>
-				<td>2</td>
-				<td>covid.jpg</td>
-				<td>Konspirasi Covid19</td>
-                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ut impedit natus cum, at ullam asperiores architecto ad molestias fuga, minima dolorum fugiat itaque ratione accusantium laudantium inventore quaerat rem.</td>
-                <td>
-                    <button class="btn btn-success "><i class="fas fa-edit text-white"></i></button>
-                </td>
-            </tr>
-            <tr>
-				<td>3</td>
-				<td>covid.jpg</td>
-				<td>Konspirasi Covid19</td>
-                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ut impedit natus cum, at ullam asperiores architecto ad molestias fuga, minima dolorum fugiat itaque ratione accusantium laudantium inventore quaerat rem.</td>
-                <td>
-                    <button class="btn btn-success "><i class="fas fa-edit text-white"></i></button>
-                </td>
-            </tr>
-            <tr>
-				<td>4</td>
-				<td>covid.jpg</td>
-				<td>Konspirasi Covid19</td>
-                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ut impedit natus cum, at ullam asperiores architecto ad molestias fuga, minima dolorum fugiat itaque ratione accusantium laudantium inventore quaerat rem.</td>
-                <td>
-                    <button class="btn btn-success "><i class="fas fa-edit text-white"></i></button>
-                </td>
-            </tr>
-            <tr>
-				<td>5</td>
-				<td>covid.jpg</td>
-				<td>Konspirasi Covid19</td>
-                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ut impedit natus cum, at ullam asperiores architecto ad molestias fuga, minima dolorum fugiat itaque ratione accusantium laudantium inventore quaerat rem.</td>
-                <td>
-                    <button class="btn btn-success "><i class="fas fa-edit text-white"></i></button>
-                </td>
-            </tr>
-
-		</tbody>
+        </tbody>
+        @endforeach
     </table>
 </div>
 </div>

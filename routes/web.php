@@ -39,17 +39,16 @@ Route::get('/berita', function () {
     return view('berita');
 });
 
-Route::get('/formBerita', function () {
-    return view('formBerita');
-});
-
 Route::get('/dashboardAdmin', function () {
     return view('dashboardAdmin');
 });
 
-Route::get('/beritaAdmin', function () {
-    return view('beritaAdmin');
-});
+Route::get('/beritaAdmin', 'BeritaController@index');
+Route::get('/beritaAdmin/create', 'BeritaController@create');
+Route::post('/beritaAdmin', 'BeritaController@store');
+Route::get('/beritaAdmin/{id}/edit', 'BeritaController@edit');
+Route::patch('/beritaAdmin/{id}', 'BeritaController@update');
+Route::delete('/beritaAdmin/{id}', 'BeritaController@destroy');
 
 Route::get('/hospitalAdmin', function () {
     return view('hospitalAdmin');

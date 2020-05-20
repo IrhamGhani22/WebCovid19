@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 18, 2020 at 09:37 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.5
+-- Generation Time: May 20, 2020 at 08:16 AM
+-- Server version: 10.4.6-MariaDB
+-- PHP Version: 7.3.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -63,10 +64,10 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 --
 
 CREATE TABLE `t_berita` (
-  `id_berita` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
   `Judul` varchar(255) NOT NULL,
   `Headline` varchar(255) NOT NULL,
-  `img` varchar(255) NOT NULL,
+  `img` varchar(255) DEFAULT NULL,
   `Isi` varchar(255) NOT NULL,
   `Pengirim` varchar(255) NOT NULL,
   `Tanggal` date NOT NULL
@@ -76,7 +77,7 @@ CREATE TABLE `t_berita` (
 -- Dumping data for table `t_berita`
 --
 
-INSERT INTO `t_berita` (`id_berita`, `Judul`, `Headline`, `img`, `Isi`, `Pengirim`, `Tanggal`) VALUES
+INSERT INTO `t_berita` (`id`, `Judul`, `Headline`, `img`, `Isi`, `Pengirim`, `Tanggal`) VALUES
 (1, 'PSBB Jawa Barat, Angka Kasus COVID-19 Turun', 'kasus covid-19 turun', '', 'JAKARTA - Ketua Gugus Tugas Percepatan Penanganan COVID-19 Daerah Jawa Barat, Ridwan Kamil melaporkan bahwa Pembatasan Sosial Berskala Besar (PSBB) yang dilakukan Pemerintah Provinsi Jawa Barat di wilayahnya dapat menurunkan kurva kasus COVID-19.\r\n\r\n“Sebe', 'TIM KOMUNIKASI PUBLIC', '2020-05-16'),
 (2, 'Sukardi Ajak Warga Panen Sayur dan Ikan Segar di Tengah Pandemi', 'Panen sayur', '', 'JAKARTA – Di tengah situasi pandemi, sebagian warga merasa jenuh atau tertekan dengan beraktivitas di rumah. Menyeimbangkan kesehatan fisik dan mental, aktivitas seorang warga bernama Sukardi bisa menjadi salah satu upaya tersebut. \r\n\r\nSukardi, seorang wa', 'TIM AITI', '2020-05-16');
 
@@ -143,7 +144,7 @@ ALTER TABLE `migrations`
 -- Indexes for table `t_berita`
 --
 ALTER TABLE `t_berita`
-  ADD PRIMARY KEY (`id_berita`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `t_login`
@@ -184,7 +185,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `t_berita`
 --
 ALTER TABLE `t_berita`
-  MODIFY `id_berita` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `t_login`
