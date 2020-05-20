@@ -22,9 +22,8 @@
 
     <div class="border-form  ml-auto mr-auto p-4">
 
-        <div class="row no-gutters">
-            <div class="col-md-12">
-                <form action="{{ url('beritaAdmin', @$berita->id) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ url('beritaAdmin', @$berita->id) }}" method="POST" enctype="multipart/form-data">
+                <div class="row no-gutters">
                     <div class="col-md-6">
                         @csrf
                         @if(!empty($berita))
@@ -60,9 +59,9 @@
                             <input type="file" id="chooseFile" class="form-control-file">
                         </div>
                     </div>
-                </form>
-            </div>
-        </div>
+                </div>
+            </form>
+
     </div>
 
 
