@@ -70,7 +70,7 @@
                     <div class="h4 text-center ">BACKEND DEVELOPER</div>
                 </div>
             </div>
-           <a class="btn btn-warna font-weight-bold ml-auto mr-auto w-25 mb-4" href="{{url('/login')}}">
+           <a class="btn btn-warna font-weight-bold ml-auto mr-auto mb-4 gambar" href="{{url('/login')}}">
                 JOIN WITH US
             </a>
         </div>
@@ -118,90 +118,7 @@
     </footer>
 
 
-    {{-- <div class="section">
-        <h1 class="display-4 font-weight-bold team text-center mr-auto ml-auto " >THE TEAM</h1>
-        <div class="row no-gutters mr-auto ml-auto mt-5">
-            <div class="col-md-4 bg-irham foto">
-                <div class=" name-irham">
-                    <div class="h2 font-weight-bold">IRHAM</div>
-                    <div class="h4">FRONTEND DEVELOPER</div>
-                </div>
-            </div>
-            <div class="col-md-4 bg-hafiizh foto">
-                <div class="name-hafiizh">
-                    <div class="h2  font-weight-bold ">HAFIIZH</div>
-                    <div class="h4">BACKEND DEVELOPER</div>
-                </div>
-            </div>
-            <div class="col-md-4 bg-bama foto">
-                <div class="  name-bama">
-                    <div class="h2 font-weight-bold">BAMA</div>
-                    <div class="h4">BACKEND DEVELOPER</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="contact  mt-5 pt-3">
-        <h1 class="display-4 font-weight-bold kontak text-center mr-auto ml-auto mt-5 " >CONTACT US</h1>
 
-        <div class="row mt-5 wadah ml-auto mr-auto">
-            <div class="col-md-5">
-                <div class="card  mb-3 text-center">
-                    <div class="card-body">
-                      <h4 class="card-title font-weight-bold">Contact Us</h4>
-                      <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                  </div>
-                  <ul class="list-group">
-                    <li class="list-group-item"><h4 class="font-weight-bold">Location</h4></li>
-                    <li class="list-group-item">SMK Negeri 4 Bandung</li>
-                    <li class="list-group-item">Jl. Kliningan No. 6, Bandung</li>
-                    <li class="list-group-item">West Java, Indonesia</li>
-                  </ul>
-            </div>
-            <div class="col-md-7">
-                <form>
-                    <div class="form-group">
-                      <label class="text-primary" for="nama">Nama</label>
-                      <input type="text" class="form-control" id="nama" placeholder="">
-                    </div>
-                    <div class="form-group">
-                        <label  class="text-primary" for="email">E-Mail</label>
-                        <input type="email" class="form-control" id="email" placeholder="">
-                      </div>
-                      <div class="form-group">
-                        <label  class="text-primary" for="no_telepon">No Telepon</label>
-                        <input type="tel" class="form-control" id="no_telepon" placeholder="">
-                      </div>
-                      <div class="form-group">
-                        <label  class="text-primary" for="pesan">Pesan</label>
-                        <textarea class="form-control" id="pesan"></textarea>
-                      </div>
-                      <button class="btn btn-color">SEND</button>
-                </form>
-            </div>
-        </div>
-    </div> --}}
-{{-- 
-    <div class="teks">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis sit, tempore aperiam asperiores distinctio, 
-    </div>
-    <div class="icon">
-        <a class="text-decoration-none font-weight-bold text-dark" href=""> <i class="fa-2x fab fa-facebook mt-3 "></i> </a>
-        <div> COVID19 INFO</div>
-        <br>
-        <a class="text-decoration-none font-weight-bold text-dark" href=""> <i class="fa-2x fab fa-instagram mt-2 "></i></a>
-        <div class="div">@covid19_info</div>
-        
-        <br>
-        <a class="text-decoration-none font-weight-bold text-dark" href=""> <i class="fa-2x fab fa-whatsapp mt-3"></i> </a>
-        0812345678
-        <br>
-        <a class="text-decoration-none font-weight-bold text-dark" href=""> <i class="fa-2x fab fa-line mt-3"></i> </a>
-        @info_covid19
-        <br>
-    </div> --}}
-    
 @endsection
 
 @section('script')

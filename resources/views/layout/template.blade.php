@@ -21,7 +21,7 @@
           <div class="navbar-nav ml-auto">
             <a class="nav-item nav-link text-decoration-none font-weight-bold mr-2 ml-2 @yield('home')" href="{{url('/home')}}">HOME</a>
             <a class="nav-item nav-link font-weight-bold mr-2 ml-2 @yield('info')" href="{{url('/info')}}">INFO COVID</a>
-            <a class="nav-item nav-link font-weight-bold mr-2 ml-2 @yield('berita')" href="#">BERITA</a>
+            <a class="nav-item nav-link font-weight-bold mr-2 ml-2 @yield('berita')" href="{{url('/berita')}}">BERITA</a>
             <a class="nav-item nav-link font-weight-bold mr-2 ml-2 @yield('report')" href="#">REPORT</a>
             <a class="nav-item nav-link font-weight-bold mr-4 ml-2 @yield('about')" href="{{url('/about')}}">ABOUT US</a>
           </div>
