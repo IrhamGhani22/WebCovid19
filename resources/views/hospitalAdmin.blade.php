@@ -30,16 +30,18 @@
 			</tr>
 		</thead>
 		<tbody>
+        @foreach ($rujuk as $row)
 			<tr>
-                <td>1</td>
-                <td>al-islam.jpg</td>
-				<td>RS Al-Islam</td>
-				<td>JL. Soekarno</td>
-                <td>Rekomended</td>
+                <td>{{ $loop->iteration }}</td>     
+                <td>{{ $row->img }}</td>
+                <td>{{ $row->nm_rumahsakit }}</td>
+                <td>{{ $row->Alamat }}</td>
+                <td>{{ $row->Tingkat_rujukan }}</td>
                 <td>
                     <button class="btn btn-success "><i class="fas fa-edit text-white"></i></button>
                 </td>
             </tr>
+        @endforeach
 		</tbody>
     </table>
 </div>

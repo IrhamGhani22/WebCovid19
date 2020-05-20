@@ -56,3 +56,5 @@ Route::get('/hospitalAdmin', function () {
 Route::get('/formHospital', function () {
     return view('formHospital');
 });
+Route::get('/hospitalAdmin', 'RujukController@index');
+Route::get('/formHospital', 'RujukController@create');

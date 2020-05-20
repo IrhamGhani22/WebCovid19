@@ -25,9 +25,13 @@
         <div class="row no-gutters">
             <div class="col-md-6">
                 <form action="">
+                    @csrf
+                        @if(!empty($rujuk))
+                            @method('PATCH')
+                    @endif
                     <div class="form-group">
                         <label for="">Nama Rumah Sakit</label>
-                        <input type="text" class="form-control" id="">
+                        <input type="text" class="form-control" name="nm_rumahsakit" value="{{ old('Judul', @$rujuk->nm_rumahsakit) }}">
                     </div>
                     <div class="form-group">
                         <label for="">Tingkat Rujukan</label>
