@@ -39,6 +39,10 @@ Route::get('/berita', function () {
     return view('berita');
 });
 
+Route::get('/detailBerita', function () {
+    return view('detailBerita');
+});
+
 Route::get('/dashboardAdmin', function () {
     return view('dashboardAdmin');
 });

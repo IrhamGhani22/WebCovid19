@@ -6,10 +6,10 @@
   <link rel="stylesheet" href="{{ URL::asset('/css/berita.css')}}">
 @endsection
 
-@section('info' , 'aktif')
+@section('berita' , 'aktif')
 
 @section('home'   , 'sliding-underline')
-@section('berita' , 'sliding-underline')
+@section('info'   , 'sliding-underline')
 @section('about'  , 'sliding-underline')
 @section('report' , 'sliding-underline')
 
@@ -33,7 +33,7 @@
         <div class="card-body">
           <span class="mb-2 tanggal">18 Mei 2020</span>
           <h5 class="card-title font-weight-bold">Presiden Jokowi Instruksikan Penguatan Faskes Tingkat Pertama untuk Efektifkan Penanganan Covid-19</h5>
-          <a href="#" class="btn btn-warna">DETAIL BERITA</a>
+          <a href="{{url('/detailBerita')}}" class="btn btn-warna">DETAIL BERITA</a>
         </div>
       </div>
     </div>
@@ -43,7 +43,7 @@
         <div class="card-body">
           <span class="mb-2 tanggal">18 Mei 2020</span>
           <h5 class="card-title font-weight-bold">Presiden Jokowi Instruksikan Penguatan Faskes Tingkat Pertama untuk Efektifkan Penanganan Covid-19</h5>
-          <a href="#" class="btn btn-warna">DETAIL BERITA</a>
+          <a href="{{url('/detailBerita')}}" class="btn btn-warna">DETAIL BERITA</a>
         </div>
       </div>
     </div>
@@ -53,7 +53,7 @@
         <div class="card-body">
           <span class="mb-2 tanggal">18 Mei 2020</span>
           <h5 class="card-title font-weight-bold">Presiden Jokowi Instruksikan Penguatan Faskes Tingkat Pertama untuk Efektifkan Penanganan Covid-19</h5>
-          <a href="#" class="btn btn-warna">DETAIL BERITA</a>
+          <a href="{{url('/detailBerita')}}" class="btn btn-warna">DETAIL BERITA</a>
         </div>
       </div>
     </div>
@@ -63,7 +63,7 @@
         <div class="card-body">
           <span class="mb-2 tanggal">18 Mei 2020</span>
           <h5 class="card-title font-weight-bold">Presiden Jokowi Instruksikan Penguatan Faskes Tingkat Pertama untuk Efektifkan Penanganan Covid-19</h5>
-          <a href="#" class="btn btn-warna">DETAIL BERITA</a>
+          <a href="{{url('/detailBerita')}}" class="btn btn-warna">DETAIL BERITA</a>
         </div>
       </div>
     </div>
