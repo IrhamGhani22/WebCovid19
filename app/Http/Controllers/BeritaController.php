@@ -74,7 +74,7 @@ class BeritaController extends Controller
         // $status = \DB::table('t_berita')->where('id', $id)->update($input);
 
         $berita = \App\Berita::find($id);
-        $status = $berita->update($input);
+        $status = $berita -> update($input);
 
         if ($request->hasFile('file')) {
             $file =  $request->file('file');

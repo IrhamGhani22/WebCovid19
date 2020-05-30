@@ -31,33 +31,41 @@
                     @endif
                     <div class="form-group">
                         <label for="">Nama Rumah Sakit</label>
-                        <input type="text" class="form-control" name="nm_rumahsakit" value="{{ old('Judul', @$rujuk->nm_rumahsakit) }}">
+                        <input type="text" class="form-control" name="nm_rumahsakit" value="{{ old('nm_rumahsakit', @$rujuk->nm_rumahsakit) }}">
                     </div>
                     <div class="form-group">
                         <label for="">Tingkat Rujukan</label>
-                        <input type="text" class="form-control" id="">
+                        <input type="text" class="form-control" name="Tingkat_rujukan" value="{{ old('Tingkat_rujukan',@$rujuk->Tingkat_rujukan)}} ">
                     </div>
                     <div class="form-group">
                         <label for="">Alamat</label>
-                        <textarea class="form-control" ></textarea>
+                        <textarea class="form-control" >{{old('Alamat', @$rujuk->Alamat)}}</textarea>
                     </div>
                     <button type="submit" class="btn btn-dark">SAVE</button>
                 </form>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
-                    <div class="box ml-auto mr-auto mb-3">
-                        <img id="preview" src="{{asset('/assets/image/no-image.jpg')}}" alt="" width="258" height="258">
+                    <div>
+                            <input type="file" name="file" id="chooseFile" class="form-control-file add " >
+                            <?php if ($action ?? '' == "edit") { ?>
+                                <img id="preview" class="img-edit"  src="{{asset('assets/image/'.$rujuk->file)}}" alt="" width="358" height="358">
+                                <input type="hidden" name="file" id="chooseFile" class="form-control-file " value="{{old('file', $rujuk->file)}}">
+                            <?php } ?>
+                            <div class="box ml-auto mr-auto">
+                                <img id="preview" src="{{asset('assets/image/no-image.jpg')}}" alt="" width="358" height="358">
+                            </div>
+
+                            {{-- <div class="box ml-auto mr-auto mb-3">
+                                <img id="preview" src="{{asset('/assets/image/no-image.jpg')}}" alt="" width="358" height="358">
+                            </div>
+                            <input type="file" name="file" id="chooseFile" class="form-control-file"> --}}
                     </div>
-                    <input type="file" id="chooseFile" class="form-control-file">
-                </div>
             </div>
         </div>
     </div>
 
 </div>
-
-
 
 @endsection
 
