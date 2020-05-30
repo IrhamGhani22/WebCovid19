@@ -35,9 +35,8 @@ Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/berita', function () {
-    return view('berita');
-});
+Route::get('/berita', 'BeritaController@index2');
+Route::get('/berita/{id}/detail', 'BeritaController@detail');
 
 Route::get('/detailBerita', function () {
     return view('detailBerita');

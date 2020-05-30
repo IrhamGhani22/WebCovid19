@@ -16,6 +16,20 @@ class BeritaController extends Controller
         $berita = \App\Berita::get();
         return view('beritaAdmin', compact('berita'));
     }
+    public function index2()
+    {
+        // $data['berita'] = \DB::table('t_berita')->get();
+        // return view('beritaAdmin', $data);
+
+        $konten = \App\Berita::get();
+        return view('berita', compact('konten'));
+    }
+
+    public function detail(Request $request, $id){
+        $data['konten'] = \DB::table('t_berita')->find($id);
+        $list['berita'] = \DB::table('t_berita')->get();
+        return view('detailBerita', $data, $list);
+    }
 
 
     public function create()
