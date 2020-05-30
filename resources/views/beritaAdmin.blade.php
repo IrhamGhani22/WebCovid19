@@ -27,7 +27,7 @@
                 <th>Pengirim</th>
                 <th>Tanggal</th>
                 <th class="berita">Berita</th>
-                <th class="aksi">Action</th>
+                <th class="aksi" colspan="2">Action</th>
 			</tr>
 		</thead>
         <tbody>
@@ -39,22 +39,18 @@
                 <td>{{ $row->Pengirim}}</td>
                 <td>{{ $row->Tanggal}}</td>
                 <td>{{ $row->Isi }}</td>
-                <td>
-                    <div class="row no-gutters">
-                        <div class="col-md-6 no-gutters text-center mt-2">
+                <td style="border-right: none;">
                             <a href="{{ url('/beritaAdmin/' . $row->id . '/edit') }}" class="btn btn-success">
                                 <i class="far fa-edit font-weight-bold text-white"></i>
                             </a>
-                        </div>
-                        <div class="col-md-6 no-gutters text-center mt-2">
+                </td>
+                <td>   
                             <form action="{{ url('/beritaAdmin',$row->id) }}" method="POST">
                             @method('DELETE')
                             @csrf
                             <button type="submit" class="btn btn-danger "><i class="fas fa-trash text-white"></i></button>
                             </form>
-                        </div>
-                    </div>
-                </td>    
+                </td>
             </tr>
             @endforeach
         </tbody>

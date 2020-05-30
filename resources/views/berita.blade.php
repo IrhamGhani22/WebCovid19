@@ -27,48 +27,19 @@
     </div>
   </form>
   <div class="row no-gutters ml-auto mr-auto">
+  @foreach ($konten as $news)
     <div class="col-md-3">
       <div class="card ml-auto mr-auto" style="width: 18rem;">
-        <img src="{{ URL::asset('/assets/image/jokowi.jpeg')}}" class="card-img-top" alt="...">
+        <img src="{{ asset('assets/image/'.$news['file']) }}" class="card-img-top" alt="...">
         <div class="card-body">
-          <span class="mb-2 tanggal">18 Mei 2020</span>
-          <h5 class="card-title font-weight-bold">Presiden Jokowi Instruksikan Penguatan Faskes Tingkat Pertama untuk Efektifkan Penanganan Covid-19</h5>
-          <a href="{{url('/detailBerita')}}" class="btn btn-warna">DETAIL BERITA</a>
+          <span class="mb-2 tanggal">{{ $news['Tanggal'] }}</span>
+          <h5 class="card-title font-weight-bold">{{ $news['Judul'] }}</h5>
+          <a href="{{url('/berita/' . $news->id . '/detail')}}" class="btn btn-warna">DETAIL BERITA</a>
         </div>
       </div>
     </div>
-    <div class="col-md-3">
-      <div class="card ml-auto mr-auto" style="width: 18rem;">
-        <img src="{{ URL::asset('/assets/image/jokowi.jpeg')}}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <span class="mb-2 tanggal">18 Mei 2020</span>
-          <h5 class="card-title font-weight-bold">Presiden Jokowi Instruksikan Penguatan Faskes Tingkat Pertama untuk Efektifkan Penanganan Covid-19</h5>
-          <a href="{{url('/detailBerita')}}" class="btn btn-warna">DETAIL BERITA</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card ml-auto mr-auto" style="width: 18rem;">
-        <img src="{{ URL::asset('/assets/image/jokowi.jpeg')}}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <span class="mb-2 tanggal">18 Mei 2020</span>
-          <h5 class="card-title font-weight-bold">Presiden Jokowi Instruksikan Penguatan Faskes Tingkat Pertama untuk Efektifkan Penanganan Covid-19</h5>
-          <a href="{{url('/detailBerita')}}" class="btn btn-warna">DETAIL BERITA</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-3">
-      <div class="card ml-auto mr-auto" style="width: 18rem;">
-        <img src="{{ URL::asset('/assets/image/jokowi.jpeg')}}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <span class="mb-2 tanggal">18 Mei 2020</span>
-          <h5 class="card-title font-weight-bold">Presiden Jokowi Instruksikan Penguatan Faskes Tingkat Pertama untuk Efektifkan Penanganan Covid-19</h5>
-          <a href="{{url('/detailBerita')}}" class="btn btn-warna">DETAIL BERITA</a>
-        </div>
-      </div>
-    </div>
+  @endforeach
   </div>
-
 </div>
 
 @endsection
