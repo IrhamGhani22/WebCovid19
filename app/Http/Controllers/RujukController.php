@@ -14,6 +14,9 @@ class RujukController extends Controller
         $rujuk = \App\Rujuk::get();
         return view('hospitalAdmin', compact('rujuk'));
     }
+    public function index2(){
+        
+    }
     public function create()
     {
         return view('formHospital');

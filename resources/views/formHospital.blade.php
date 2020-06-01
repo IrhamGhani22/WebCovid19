@@ -8,8 +8,21 @@
     
 @section('container')
 
+<?php
+
+$action = 'input';
+$title = '  <i class="fas fa-plus-square ml-4"></i> INPUT RUJUKAN';
+
+if (!empty($rujuk)){
+
+$action = 'edit';
+$title = ' <i class=" fas fa-edit ml-4 "></i> EDIT RUJUKAN';
+
+}
+?>
+
 <div class="col-md-10 content">
-    <h1 class="judul mt-2 ml-2 text-dark"><i class="fas fa-plus-square ml-4"></i> ADD HOSPITAL </h1>
+    <h1 class="judul mt-2 ml-2 text-dark"><i class="fas fa-plus-square ml-4"></i> <?= $title ?> </h1>
     <hr class="line">
 
     <div class="card border-dark ml-auto mr-auto" ">
@@ -26,8 +39,8 @@
             <div class="col-md-6">
                 <form action="">
                     @csrf
-                        @if(!empty($rujuk))
-                            @method('PATCH')
+                    @if(!empty($rujuk))
+                        @method('PATCH')
                     @endif
                     <div class="form-group">
                         <label for="">Nama Rumah Sakit</label>
@@ -47,9 +60,10 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <div>
-                            <input type="file" name="file" id="chooseFile" class="form-control-file add " >
-                            <?php if ($action ?? '' == "edit") { ?>
-                                <img id="preview" class="img-edit"  src="{{asset('assets/image/'.$rujuk->file)}}" alt="" width="358" height="358">
+                          
+                        <input type="file" name="file" id="chooseFile" class="form-control-file add " >
+                            <?php if ($action == "edit") { ?>
+                                <img id="preview" class="img-edit"  src="{{asset('assets/image/'.$rujuk>file)}}" alt="" width="358" height="358">
                                 <input type="hidden" name="file" id="chooseFile" class="form-control-file " value="{{old('file', $rujuk->file)}}">
                             <?php } ?>
                             <div class="box ml-auto mr-auto">
@@ -60,7 +74,9 @@
                                 <img id="preview" src="{{asset('/assets/image/no-image.jpg')}}" alt="" width="358" height="358">
                             </div>
                             <input type="file" name="file" id="chooseFile" class="form-control-file"> --}}
+
                     </div>
+                </div>
             </div>
         </div>
     </div>

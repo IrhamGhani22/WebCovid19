@@ -53,11 +53,15 @@ Route::get('/beritaAdmin/{id}/edit', 'BeritaController@edit');
 Route::patch('/beritaAdmin/{id}', 'BeritaController@update');
 Route::delete('/beritaAdmin/{id}', 'BeritaController@destroy');
 
-Route::get('/hospitalAdmin', function () {
-    return view('hospitalAdmin');
-});
-Route::get('/formHospital', function () {
-    return view('formHospital');
-});
+// Route::get('/hospitalAdmin', function () {
+//     return view('hospitalAdmin');
+// });
+// Route::get('/formHospital', function () {
+//     return view('formHospital');
+// });
 Route::get('/hospitalAdmin', 'RujukController@index');
-Route::get('/formHospital', 'RujukController@create');
+Route::get('/hospitalAdmin/create', 'RujukController@create');
+Route::post('/hospitalAdmin', 'RujukController@store');
+Route::get('/hospitalAdmin/{id}/edit', 'RujukController@edit');
+Route::patch('/hospitalAdmin/{id}', 'RujukController@update');
+Route::delete('/hospitalAdmin/{id}', 'RujukController@destroy');
