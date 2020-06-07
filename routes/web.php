@@ -34,6 +34,8 @@ Route::get('/detailBerita', function () {
     return view('detailBerita');
 });
 
+Route::get('/pesan', 'PesanController@index');
+
 Route::get('/dashboardAdmin', 'InfoController@infoAdmin')->middleware('auth')->name('dashboardAdmin');
 
 Route::get('/hospital', 'RujukController@index2');
@@ -57,7 +59,3 @@ Route::post('/hospitalAdmin', 'RujukController@store')->middleware('auth')->name
 Route::get('/hospitalAdmin/{id}/edit', 'RujukController@edit')->middleware('auth')->name('formAdminedit');
 Route::patch('/hospitalAdmin/{id}', 'RujukController@update')->middleware('auth')->name('formAdminupdate');
 Route::delete('/hospitalAdmin/{id}', 'RujukController@destroy')->middleware('auth')->name('formAdmindestroy');
-
-Route::get('/pesan', function () {
-    return view('pesan');
-});

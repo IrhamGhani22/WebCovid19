@@ -25,12 +25,13 @@
 			</tr>
 		</thead>
         <tbody>
+            @foreach($pesan as $row)
 			<tr>
-                <td>1</td>     
-                <td>Irham</td>
-                <td>irham@gmail.com</td>
-                <td>0816755765674</td>
-                <td class="pesan">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam fugit ipsam incidunt error, reprehenderit id! Necessitatibus, quos? Voluptatibus aperiam animi rerum consectetur pariatur qui blanditiis odio, nulla possimus inventore natus.</td>
+                <td>{{ $loop->iteration }}</td>     
+                <td>{{ $row->nama }}</td>
+                <td>{{ $row->email }}</td>
+                <td>{{ $row->phone }}</td>
+                <td class="pesan">{{ $row->message }}</td>
                 <td style="border-right: none;">
                     <div class="row">
                         <div class="col-md-6">
@@ -46,6 +47,7 @@
                     </div>
                 </td>                  
             </tr>
+            @endforeach
         </tbody>
     </table>
 </div>
