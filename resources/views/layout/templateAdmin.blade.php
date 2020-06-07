@@ -25,11 +25,12 @@
                 <li class=" nav-item pb-3 mb-2 profil ">
                     <div class="row no-gutters">
                         <div class="col-md-4"> 
-                            <img class=" rounded-circle ml-3 " width=" 50 " height=" 50 " src="/assets/image/irham.jpg " alt=" ">
+                            <i class="fas fa-cog fa-3x ml-2 fa-spin fa-fw"></i>
                         </div>
                         <div class="col-md-8 mr-auto">
+                            <i class="fas fa-cog fa-spin fa-fw"></i>
                             <h6>
-                                <a class=" nav-link text-white mt-2">ADMIN</a>
+                                <a class=" nav-link text-white ml-2" style="margin-top: -11px;">{{ Auth::user()->name }}</a>
                             </h6>
                         </div>
                     </div>
