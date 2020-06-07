@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
 
 use File;
 
@@ -21,11 +23,12 @@ class BeritaController extends Controller
         // $data['berita'] = \DB::table('t_berita')->get();
         // return view('beritaAdmin', $data);
 
-        $konten = \App\Berita::get();
+        $konten = \App\Berita::paginate(9);
         return view('berita', compact('konten'));
     }
 
-    public function detail(Request $request, $id){
+    public function detail(Request $request, $id)
+    {
         $data['konten'] = \DB::table('t_berita')->find($id);
         $list['berita'] = \DB::table('t_berita')->get();
         return view('detailBerita', $data, $list);
@@ -88,7 +91,7 @@ class BeritaController extends Controller
         // $status = \DB::table('t_berita')->where('id', $id)->update($input);
 
         $berita = \App\Berita::find($id);
-        $status = $berita -> update($input);
+        $status = $berita->update($input);
 
         if ($request->hasFile('file')) {
             $file =  $request->file('file');
@@ -123,5 +126,14 @@ class BeritaController extends Controller
         } else {
             return redirect('/beritaAdmin/create')->with('error', 'Gagal dihapus');
         }
+    }
+
+    public function search(Request $request)
+    {
+        $search = $request->search;
+
+        $konten = \App\Berita::where('Judul', 'like', "%" . $search . "%")->paginate(9);
+
+        return view('berita', compact('konten'));
     }
 }

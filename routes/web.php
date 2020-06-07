@@ -36,6 +36,7 @@ Route::get('/about', function () {
 });
 
 Route::get('/berita', 'BeritaController@index2');
+Route::get('/berita/search', 'BeritaController@search');
 Route::get('/berita/{id}/detail', 'BeritaController@detail');
 
 Route::get('/detailBerita', function () {
@@ -65,3 +66,8 @@ Route::post('/hospitalAdmin', 'RujukController@store');
 Route::get('/hospitalAdmin/{id}/edit', 'RujukController@edit');
 Route::patch('/hospitalAdmin/{id}', 'RujukController@update');
 Route::delete('/hospitalAdmin/{id}', 'RujukController@destroy');
+
+
+Route::get('/hospital', function () {
+    return view('hospital');
+});
