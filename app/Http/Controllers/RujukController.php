@@ -15,7 +15,8 @@ class RujukController extends Controller
         return view('hospitalAdmin', compact('rujuk'));
     }
     public function index2(){
-        
+        $rujuk = \App\Rujuk::get();
+        return view('hospital', compact('rujuk'));
     }
     public function create()
     {
@@ -81,13 +82,7 @@ class RujukController extends Controller
     }
     public function destroy(Request $request, $id)
     {
-        // $status = \DB::table('t_rujuk')->where('id', $id)->delete();
-
-        $rujuk = \App\Rujuk::find($id);
-
-        img::delete('assets/image/' . $rujuk->file);
-
-        $status = $rujuk->delete();
+        $status = \DB::table('t_rujuk')->where('id', $id)->delete();
 
         if ($status) {
             return redirect('/hospitalAdmin')->with('success', 'Rujukan berhasil dihapus');

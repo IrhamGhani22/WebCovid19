@@ -10,7 +10,7 @@
 
 @section('info'  , 'sliding-underline')
 @section('berita', 'sliding-underline')
-@section('report', 'sliding-underline')
+@section('hospital', 'sliding-underline')
 @section('about' , 'sliding-underline')
 
 @section('container')

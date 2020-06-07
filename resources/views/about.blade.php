@@ -11,9 +11,32 @@
 @section('home'  , 'sliding-underline')
 @section('info'  , 'sliding-underline')
 @section('berita', 'sliding-underline')
-@section('report', 'sliding-underline')
+@section('hospital', 'sliding-underline')
 
 @section('container')
+
+    @if(session('success'))
+    <div aria-live="polite" aria-atomic="true" style="position: relative; min-height: 200px;">
+      <div class="toast" style="position: absolute; top: 0; right: 0;">
+        <div class="toast-header">
+          <img src="..." class="rounded mr-2" alt="...">
+          <strong class="mr-auto">System</strong>
+          <small>11 mins ago</small>
+          <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="toast-body">
+          {{ session('success') }}
+        </div>
+      </div>
+    </div>
+    @endif    
+    @if(session('error'))
+        <div class="alert alert-danger">
+            {{ session('error') }}
+        </div>
+    @endif   
 
     <div class="jumbotron">
         <h1 class="display-4 font-weight-bold stay text-center mr-auto ml-auto">STAY AT HOME</h1>
@@ -85,39 +108,38 @@
                 </div>
             </div>
         </div>
-        <div class="row w-75 ml-auto mr-auto">
-            <div class="col-md-6 bgKiri">
-               <img src="{{ URL::asset('/assets/image/bg-contact.jpg')}}" width="400" height="400" alt="">
+            <div class="row w-75 ml-auto mr-auto">
+                <div class="col-md-6 bgKiri">
+                   <img src="{{ URL::asset('/assets/image/bg-contact.jpg')}}" width="400" height="400" alt="">
+                </div>
+                <div class="col-md-6 pt-4 formKanan">
+                    <form action="{{ url('about') }}" method="post">
+                        @csrf
+                        <div class="form-group">
+                            <input type="text" name="nama" class="form-input font-weight-bold " placeholder="YOUR NAME">
+                        </div>
+                        <div class="form-group mt-4">
+                            <input type="email" name="email" class="form-input font-weight-bold " placeholder="YOUR E-MAIL ADDRESS">
+                        </div>
+                        <div class="form-group mt-4">
+                            <input type="tel" name="phone" class="form-input font-weight-bold " placeholder="YOUR NUMBER PHONE">
+                        </div>
+                        <div class="form-group mt-4">
+                            <textarea class="form-input font-weight-bold" name="message" placeholder="YOUR MESSAGE"></textarea>
+                        </div>
+                        <button type="submit" class="btn tombol font-weight-bold mb-3">SEND</button>
+                    </form>
+                </div>
             </div>
-            <div class="col-md-6 pt-4 formKanan">
-                <form action="">
-                    <div class="form-group">
-                        <input type="text" class="form-input font-weight-bold " placeholder="YOUR NAME">
-                    </div>
-                    <div class="form-group mt-4">
-                        <input type="email" class="form-input font-weight-bold " placeholder="YOUR E-MAIL ADDRESS">
-                    </div>
-                    <div class="form-group mt-4">
-                        <input type="tel" class="form-input font-weight-bold " placeholder="YOUR NUMBER PHONE">
-                    </div>
-                    <div class="form-group mt-4">
-                        <textarea class="form-input font-weight-bold" placeholder="YOUR MESSAGE"></textarea>
-                    </div>
-                    <button type="submit" class="btn tombol font-weight-bold mb-3">SEND</button>
-                </form>
-            </div>
-        </div>
     </section>
 
     <footer>
         <div class="container">
             <div class="row copyright">
-                <p class="font-weight-bold "><i class=" far fa-copyright "></i> 2020 COVID19-INFO | All Rights Reserved </p>
+                <p class="font-weight-bold "><i class=" far fa-copyright "></i> 2020 COVID19-INFO | SMKN 4 BANDUNG </p>
             </div>
         </div>
     </footer>
-
-
 
 @endsection
 

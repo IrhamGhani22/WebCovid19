@@ -30,7 +30,7 @@
                         <div class="col-md-8 mr-auto">
                             <i class="fas fa-cog fa-spin fa-fw"></i>
                             <h6>
-                                <a class=" nav-link text-white ml-2" style="margin-top: -11px;">{{ Auth::user()->name }}</a>
+                                <a class=" nav-link text-white ml-2" style="margin-top: -11px;">{{ Auth::user()->name ?? ''}}</a>
                             </h6>
                         </div>
                     </div>

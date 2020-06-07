@@ -13,4 +13,10 @@ class InfoController extends Controller
     	$data = $response->json();
     	return view('infoCovid', compact('data'));
     }
+     public function infoAdmin()
+    {
+    	$response = Http::get('https://api.kawalcorona.com/indonesia');
+    	$data = $response->json();
+    	return view('dashboardAdmin', compact('data'));
+    }
 }

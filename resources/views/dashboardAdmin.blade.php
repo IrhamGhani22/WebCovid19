@@ -9,28 +9,30 @@
 @section('container')
 
 <div class="jumbotron">
-    <h1 class="display-4 text-white">Hello, {{ Auth::user()->name }}!</h1>
+    <h1 class="display-4 text-white">Hello, {{ Auth::user()->name ?? ''}}!</h1>
     <p class="lead text-white">Selamat Datang di Website Admin Pemantauan Covid-19</p>
     <hr class="my-4">
     <div class="card card-covid">
         <div class="row no-gutters">
             <div class="col-md-10 text-white">
                 <h2 class="font-weight-bold">Indonesia</h2>
-                <div class="row no-gutters">
-                    <div class="col-md-2">Positif</div>
-                    <div class="col-md-1">:</div>
-                    <div class="col-md-9"></div>
-                </div>
-                <div class="row no-gutters">
-                    <div class="col-md-2">Meninggal</div>
-                    <div class="col-md-1">:</div>
-                    <div class="col-md-9"></div>
-                </div>
-                <div class="row no-gutters">
-                    <div class="col-md-2">Sembuh</div>
-                    <div class="col-md-1">:</div>
-                    <div class="col-md-9"></div>
-                </div>
+                @foreach($data as $info)
+                    <div class="row no-gutters">
+                        <div class="col-md-2">Positif</div>
+                        <div class="col-md-1">:</div>
+                        <div class="col-md-9">{{ $info['positif'] }}</div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-md-2">Meninggal</div>
+                        <div class="col-md-1">:</div>
+                        <div class="col-md-9">{{ $info['meninggal'] }}</div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-md-2">Sembuh</div>
+                        <div class="col-md-1">:</div>
+                        <div class="col-md-9">{{ $info['sembuh'] }}</div>
+                    </div>
+                @endforeach
             </div>
             <div class="col-md-2">
                 <img src="{{ URL::asset('/assets/img/indonesia.svg')}}" style="width: 130px;">
@@ -64,7 +66,7 @@
                         <i class="fas fa-hospital "></i>
                     </div>
                     <h5 class="card-title">JUMLAH HOSPITAL</h5>
-                    <div class="display-4 font-weight-bold">120</div>
+                    <div class="display-4 font-weight-bold">{{ $rujuk = \App\Rujuk::count() }}</div>
                 </div>
                 <div class="card-footer">
                     <a class="text-decoration-none text-white" href="">

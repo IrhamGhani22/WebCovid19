@@ -27,7 +27,7 @@ $title = ' <i class=" fas fa-edit ml-4 "></i> EDIT RUJUKAN';
 
     <div class="card border-dark ml-auto mr-auto" ">
         <div class="card-body border" >
-            <a class="text-decoration-none" href="">
+            <a class="text-decoration-none" href="{{ url('/hospitalAdmin') }}">
                 <i class="fas fa-arrow-left"></i> Back
             </a>
         </div>
@@ -35,9 +35,9 @@ $title = ' <i class=" fas fa-edit ml-4 "></i> EDIT RUJUKAN';
 
     <div class="border-form  ml-auto mr-auto p-4">
 
-        <div class="row no-gutters">
-            <div class="col-md-6">
-                <form action="">
+        <form action="{{ url('hospitalAdmin', @$rujuk->id) }}" method="post" enctype="multipart/form-data">
+            <div class="row no-gutters">
+                <div class="col-md-6">
                     @csrf
                     @if(!empty($rujuk))
                         @method('PATCH')
@@ -52,33 +52,32 @@ $title = ' <i class=" fas fa-edit ml-4 "></i> EDIT RUJUKAN';
                     </div>
                     <div class="form-group">
                         <label for="">Alamat</label>
-                        <textarea class="form-control" >{{old('Alamat', @$rujuk->Alamat)}}</textarea>
+                        <textarea class="form-control" name="Alamat">{{old('Alamat', @$rujuk->Alamat)}}</textarea>
                     </div>
                     <button type="submit" class="btn btn-dark">SAVE</button>
-                </form>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <div>
-                          
-                        <input type="file" name="file" id="chooseFile" class="form-control-file add " >
-                            <?php if ($action == "edit") { ?>
-                                <img id="preview" class="img-edit"  src="{{asset('assets/image/'.$rujuk->file)}}" alt="" width="258" height="258">
-                                <input type="hidden" name="file" id="chooseFile" class="form-control-file " value="{{old('file', $rujuk->file)}}">
-                            <?php } ?>
-                            <div class="box ml-auto mr-auto">
-                                <img id="preview" src="{{asset('assets/image/no-image.jpg')}}" alt="" width="258" height="258">
-                            </div>
+                </div>
+            
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <div>
+                            <input type="file" name="file" id="chooseFile" class="form-control-file add " >
+                                <?php if ($action == "edit") { ?>
+                                    <img id="preview" class="img-edit"  src="{{asset('assets/image/'.$rujuk->file)}}" alt="" width="258" height="258">
+                                    <input type="hidden" name="file" id="chooseFile" class="form-control-file " value="{{old('file', $rujuk->file)}}">
+                                <?php } ?>
+                                <div class="box ml-auto mr-auto">
+                                    <img id="preview" src="{{asset('assets/image/no-image.jpg')}}" alt="" width="258" height="258">
+                                </div>
 
-                            {{-- <div class="box ml-auto mr-auto mb-3">
-                                <img id="preview" src="{{asset('/assets/image/no-image.jpg')}}" alt="" width="358" height="358">
-                            </div>
-                            <input type="file" name="file" id="chooseFile" class="form-control-file"> --}}
-
+                                {{-- <div class="box ml-auto mr-auto mb-3">
+                                    <img id="preview" src="{{asset('/assets/image/no-image.jpg')}}" alt="" width="358" height="358">
+                                </div>
+                                <input type="file" name="file" id="chooseFile" class="form-control-file"> --}}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
 
 </div>

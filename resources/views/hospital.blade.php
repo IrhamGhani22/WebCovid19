@@ -41,6 +41,7 @@
 
 
 <div class="row wadah  ml-auto mr-auto">
+    @foreach($rujuk  as $data)
     <div class="col-md-6">
         <div class="card">
             <div class="row">
@@ -48,35 +49,18 @@
                     <img src="{{ asset('assets/image/rs-hasansadikin.jpeg') }}" width="200" height="200" alt="">
                 </div>
                 <div class="col-md-8">
-                   <h4 class="font-weight-bold mt-2">Rumah Sakit Hasan Sadikin </h4>
+                   <h4 class="font-weight-bold mt-2">{{ $data['nm_rumahsakit'] }}</h4>
                    <div class="lokasi">
                     <i class="fas fa-map-marker-alt"></i>
-                    Jl. Pasteur No.38, Pasteur, Kec. Sukajadi, Kota Bandung, Jawa Barat 40161
+                    {{ $data['Alamat'] }}
                     <div class="h6 mt-4">Tingkat Rujukan  :</div>
-                    <div class="font-weight-bold">Rumah Sakit Type A</div>
+                    <div class="font-weight-bold">{{ $data['Tingkat_rujukan'] }}</div>
                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="col-md-6">
-        <div class="card">
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="{{ asset('assets/image/rs-hasansadikin.jpeg') }}" width="200" height="200" alt="">
-                </div>
-                <div class="col-md-8">
-                   <h4 class="font-weight-bold mt-2">Rumah Sakit Hasan Sadikin </h4>
-                   <div class="lokasi">
-                    <i class="fas fa-map-marker-alt"></i>
-                    Jl. Pasteur No.38, Pasteur, Kec. Sukajadi, Kota Bandung, Jawa Barat 40161
-                    <div class="h6 mt-4">Tingkat Rujukan  :</div>
-                    <div class="font-weight-bold">Rumah Sakit Type A</div>
-                   </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    @endforeach
 </div>
 <br><br><br><br><br>
     

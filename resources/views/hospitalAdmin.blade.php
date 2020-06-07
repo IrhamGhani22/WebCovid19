@@ -33,20 +33,26 @@
         @foreach ($rujuk as $row)
 			<tr>
                 <td>{{ $loop->iteration }}</td>     
-                <td>{{ $row->img }}</td>
+                <td><img src="{{asset('assets/image/'.$row->file)}}" alt="" width="100" height="100"></td>
                 <td>{{ $row->nm_rumahsakit }}</td>
                 <td>{{ $row->Alamat }}</td>
                 <td>{{ $row->Tingkat_rujukan }}</td>
-                <td>
-                    <button class="btn btn-success "><i class="fas fa-edit text-white"></i></button>
-                </td>
-                <td>   
+                <td style="border-right: none;">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a href="{{ url('/hospitalAdmin/' . $row->id . '/edit') }}" class="btn btn-success">
+                                <i class="far fa-edit font-weight-bold text-white"></i>
+                            </a>
+                        </div>
+                        <div class="col-md-6">              
                             <form action="{{ url('/hospitalAdmin',$row->id) }}" method="POST">
-                            @method('DELETE')
-                            @csrf
-                            <button type="submit" class="btn btn-danger "><i class="fas fa-trash text-white"></i></button>
+                                @method('DELETE')
+                                @csrf
+                                <button type="submit" class="btn btn-danger"><i class="fas fa-trash text-white"></i></button>
                             </form>
-                </td>
+                        </div>
+                    </div>
+                </td>            
             </tr>
         @endforeach
 		</tbody>
