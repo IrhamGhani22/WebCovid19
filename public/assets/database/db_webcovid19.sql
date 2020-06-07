@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 07, 2020 at 11:26 AM
+-- Generation Time: Jun 07, 2020 at 01:20 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.8
 
@@ -82,7 +82,7 @@ CREATE TABLE `t_berita` (
 INSERT INTO `t_berita` (`id`, `Judul`, `Headline`, `file`, `Isi`, `Pengirim`, `Tanggal`, `updated_at`, `created_at`) VALUES
 (1, 'PSBB Jawa Barat, Angka Kasus COVID-19 Turun', 'kasus covid-19 turun', '1589985375_8.PNG', 'JAKARTA - Ketua Gugus Tugas Percepatan Penanganan COVID-19 Daerah Jawa Barat, Ridwan Kamil melaporkan bahwa Pembatasan Sosial Berskala Besar (PSBB) yang dilakukan Pemerintah Provinsi Jawa Barat di wilayahnya dapat menurunkan kurva kasus COVID-19.\r\n\r\n“Sebe', 'TIM KOMUNIKASI PUBLIC', '2020-05-16', '2020-05-20 07:36:15', NULL),
 (9, 'Bambang', 'Mantap', '1590735440_IMG-20191002-WA0000.jpg', 'cuma coba coba aslii', 'Hafiizh', '2020-05-29', '2020-05-28 23:57:20', '2020-05-28 23:57:20'),
-(10, 'SMKN 4 Bandung kelas XI-RPL 2 mendapatkan nilai dan apresiasi terbaik karena membuat web bertemakan covid-19 yang sangat informatif dan user friendly', 'SMKN 4 Kuat Ma\'Rifat', '1590740425_admin-edit.jpg', 'SMKN 4 Bandung kelas XI-RPL 2 mendapatkan nilai dan apresiasi terbaik karena membuat web bertemakan covid-19 yang sangat informatif dan user friendly, SMKN 4 Kuat Ma\'Rifat, Hafiizh, 2020-05-29, Siswa SMK Negeri 4 Bandung lagi-lagi menjadi sorotan publik. 3 orang siswa dari kelas XI jurusan Rekayasa Perangkat Lunak bernama Irham Abdul Ghani, Muhammad Fadlul Hafiizh dan Bama Qyandija mendapatkan apreasiasi dari para guru dan dinas Pendidikan karena berhasil membuat sebuah website informatif mengenai covid-19 di Indonesia secara sangat terperinci dan user friendly. Web ini berisikan informasi yang aktual dan akurat. Berikut informasi yang dapat diperoleh dari website informatif tersebut, diantaranya: Catatan jumlah positif pasien terdampak virus corona Catatan pasien yang meinggal akibat dampak virus corona Catatan pasien yang sembuh dari virus corona bukan hanya itu tetapi apabila kalian eksplore lebih jauh, kalian dapat menemukan informasi mengenai berita berita terkini mengenai covid-19 dan rumah sakit rujukan khusus pasien covid-19 di seluruh Indonesia. Selain itu apabila kalian ingin berpartisipasi memberikan suatu informasi, berita ataupun tanggapan kalian hanya tinggal menggunakan fitur pesan dan report yang sudah disediakan didalam web tersebut, gimana nihh menurut kalian semua? Cintai dan dukung semua kreativitas anak bangsa, kita buat Indonesia maju ke era digital dan buat ibu pertiwi ini merasa bangga. Sumbangkan donasi kalian, hubungi : Hafiizh 089655031225', 'Hafiizh', '2020-05-29', '2020-05-29 01:20:25', '2020-05-29 01:20:25');
+(10, 'Siswa Terbaik SMKN 4 Bandung', 'SMKN 4 Kuat Ma\'Rifat', '1590740425_admin-edit.jpg', 'SMKN 4 Bandung kelas XI-RPL 2 mendapatkan nilai dan apresiasi terbaik karena membuat web bertemakan covid-19 yang sangat informatif dan user friendly, SMKN 4 Kuat Ma\'Rifat, Hafiizh, 2020-05-29, Siswa SMK Negeri 4 Bandung lagi-lagi menjadi sorotan publik. 3 orang siswa dari kelas XI jurusan Rekayasa Perangkat Lunak bernama Irham Abdul Ghani, Muhammad Fadlul Hafiizh dan Bama Qyandija mendapatkan apreasiasi dari para guru dan dinas Pendidikan karena berhasil membuat sebuah website informatif mengenai covid-19 di Indonesia secara sangat terperinci dan user friendly. Web ini berisikan informasi yang aktual dan akurat. Berikut informasi yang dapat diperoleh dari website informatif tersebut, diantaranya: Catatan jumlah positif pasien terdampak virus corona Catatan pasien yang meinggal akibat dampak virus corona Catatan pasien yang sembuh dari virus corona bukan hanya itu tetapi apabila kalian eksplore lebih jauh, kalian dapat menemukan informasi mengenai berita berita terkini mengenai covid-19 dan rumah sakit rujukan khusus pasien covid-19 di seluruh Indonesia. Selain itu apabila kalian ingin berpartisipasi memberikan suatu informasi, berita ataupun tanggapan kalian hanya tinggal menggunakan fitur pesan dan report yang sudah disediakan didalam web tersebut, gimana nihh menurut kalian semua? Cintai dan dukung semua kreativitas anak bangsa, kita buat Indonesia maju ke era digital dan buat ibu pertiwi ini merasa bangga. Sumbangkan donasi kalian, hubungi : Hafiizh 089655031225', 'Hafiizh', '2020-05-29', '2020-06-07 03:04:40', '2020-05-29 01:20:25');
 
 -- --------------------------------------------------------
 
@@ -133,7 +133,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'Muhammad Fadlul Hafiizh', 'muh.hafiizh56@gmail.com', NULL, '$2y$10$6W1E2wwN5.rVL3jasDoZ.uyADDSvT3hNgJC.3ZpUzkI6IKKj5jajy', NULL, '2020-06-07 00:54:56', '2020-06-07 00:54:56');
+(1, 'Hafiizh', 'muh.hafiizh56@gmail.com', NULL, '$2y$10$6W1E2wwN5.rVL3jasDoZ.uyADDSvT3hNgJC.3ZpUzkI6IKKj5jajy', NULL, '2020-06-07 00:54:56', '2020-06-07 00:54:56'),
+(5, 'Irham', 'irhamghan22@gmail.com', NULL, '$2y$10$U5Cx3tSnd178vEC3UuHjhekHHNOulQjpME725zInEbkq.RbirRMuu', NULL, '2020-06-07 03:47:04', '2020-06-07 03:47:04');
 
 --
 -- Indexes for dumped tables
@@ -196,7 +197,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `t_berita`
 --
 ALTER TABLE `t_berita`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `t_login`
@@ -214,7 +215,7 @@ ALTER TABLE `t_rujuk`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
