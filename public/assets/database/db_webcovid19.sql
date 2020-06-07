@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 30, 2020 at 03:13 PM
+-- Generation Time: Jun 07, 2020 at 11:26 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.8
 
@@ -92,7 +92,8 @@ INSERT INTO `t_berita` (`id`, `Judul`, `Headline`, `file`, `Isi`, `Pengirim`, `T
 
 CREATE TABLE `t_login` (
   `id` int(11) NOT NULL,
-  `username` varchar(255) NOT NULL,
+  `name` varchar(20) NOT NULL,
+  `email` varchar(30) NOT NULL,
   `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -126,6 +127,13 @@ CREATE TABLE `users` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'Muhammad Fadlul Hafiizh', 'muh.hafiizh56@gmail.com', NULL, '$2y$10$6W1E2wwN5.rVL3jasDoZ.uyADDSvT3hNgJC.3ZpUzkI6IKKj5jajy', NULL, '2020-06-07 00:54:56', '2020-06-07 00:54:56');
 
 --
 -- Indexes for dumped tables
@@ -206,7 +214,7 @@ ALTER TABLE `t_rujuk`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

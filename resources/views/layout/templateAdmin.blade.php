@@ -29,7 +29,7 @@
                         </div>
                         <div class="col-md-8 mr-auto">
                             <h6>
-                                <a class=" nav-link text-white mt-2">ADMIN</a>
+                                <a class=" nav-link text-white mt-2">{{Auth::user()->name ?? ''}}</a>
                             </h6>
                         </div>
                     </div>
@@ -61,7 +61,7 @@
                 </li>
                 <li class="nav-item pt-2 pb-2 mt-2  sliding-underline">
                     <h6>
-                        <i class="fas fa-sign-out-alt text-white ml-4 " style="font-size: 145%; "></i><a class="nav-link d-inline text-white " href="# ">LOGOUT</a>
+                        <i class="fas fa-sign-out-alt text-white ml-4 " style="font-size: 145%; "></i><a class="nav-link d-inline text-white " href="{{ route('logout') }}">LOGOUT</a>
                     </h6>
                 </li>
                 <li class=" nav-item pt-2 pb-2 mt-2 " ">
