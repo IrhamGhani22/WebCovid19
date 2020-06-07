@@ -34,7 +34,8 @@ Route::get('/detailBerita', function () {
     return view('detailBerita');
 });
 
-Route::get('/pesan', 'PesanController@index');
+Route::get('/pesan', 'ContactUsController@pesan');
+Route::delete('/pesan/{id}', 'ContactUsController@destroy');
 
 Route::get('/dashboardAdmin', 'InfoController@infoAdmin')->middleware('auth')->name('dashboardAdmin');
 

@@ -69,7 +69,7 @@
                     <div class="display-4 font-weight-bold">{{ $rujuk = \App\Rujuk::count() }}</div>
                 </div>
                 <div class="card-footer">
-                    <a class="text-decoration-none text-white" href="">
+                    <a class="text-decoration-none text-white" href="{{url('/hospitalAdmin')}}">
                         <p class="card-text text-white">Lihat Detail <i
                                 class="fas fa-angle-double-right ml-2"></i>
                         </p>
@@ -84,10 +84,10 @@
                         <i class="fas fa-envelope "></i>
                     </div>
                     <h5 class="card-title">JUMLAH PESAN</h5>
-                    <div class="display-4 font-weight-bold">120</div>
+                    <div class="display-4 font-weight-bold">{{ $pesan = \App\Pesan::count() }}</div>
                 </div>
                 <div class="card-footer">
-                    <a class="text-decoration-none text-white" href="">
+                    <a class="text-decoration-none text-white" href="{{url('/pesan')}}">
                         <p class="card-text text-white">Lihat Detail <i
                                 class="fas fa-angle-double-right ml-2"></i>
                         </p>

@@ -40,7 +40,9 @@
                             </a>
                         </div>
                         <div class="col-md-6">              
-                            <form action="" method="POST">
+                            <form action="{{ url('pesan', $row->id) }}" method="POST">
+                                @method('DELETE')
+                                @csrf
                                 <button type="submit" class="btn btn-danger"><i class="fas fa-trash text-white"></i></button>
                             </form>
                         </div>
