@@ -57,3 +57,7 @@ Route::post('/hospitalAdmin', 'RujukController@store')->middleware('auth')->name
 Route::get('/hospitalAdmin/{id}/edit', 'RujukController@edit')->middleware('auth')->name('formAdminedit');
 Route::patch('/hospitalAdmin/{id}', 'RujukController@update')->middleware('auth')->name('formAdminupdate');
 Route::delete('/hospitalAdmin/{id}', 'RujukController@destroy')->middleware('auth')->name('formAdmindestroy');
+
+Route::get('/pesan', function () {
+    return view('pesan');
+});

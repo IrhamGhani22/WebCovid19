@@ -52,7 +52,7 @@
                 </li>
                 <li class="nav-item mb-2 mt-2 pt-2 profil pb-2 sliding-underline">
                     <h6>
-                        <i class="fas fa-envelope text-white ml-4 " style="font-size: 145%; "></i><a class="nav-link d-inline text-white " href="#">PESAN</a>
+                        <i class="fas fa-envelope text-white ml-4 " style="font-size: 145%; "></i><a class="nav-link d-inline text-white " href="{{url('/pesan')}}">PESAN</a>
                     </h6>
                 </li>
                 <li class="nav-item pt-2 pb-2 mt-2  sliding-underline">
