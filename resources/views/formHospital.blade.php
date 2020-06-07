@@ -63,11 +63,11 @@ $title = ' <i class=" fas fa-edit ml-4 "></i> EDIT RUJUKAN';
                           
                         <input type="file" name="file" id="chooseFile" class="form-control-file add " >
                             <?php if ($action == "edit") { ?>
-                                <img id="preview" class="img-edit"  src="{{asset('assets/image/'.$rujuk>file)}}" alt="" width="358" height="358">
+                                <img id="preview" class="img-edit"  src="{{asset('assets/image/'.$rujuk->file)}}" alt="" width="258" height="258">
                                 <input type="hidden" name="file" id="chooseFile" class="form-control-file " value="{{old('file', $rujuk->file)}}">
                             <?php } ?>
                             <div class="box ml-auto mr-auto">
-                                <img id="preview" src="{{asset('assets/image/no-image.jpg')}}" alt="" width="358" height="358">
+                                <img id="preview" src="{{asset('assets/image/no-image.jpg')}}" alt="" width="258" height="258">
                             </div>
 
                             {{-- <div class="box ml-auto mr-auto mb-3">

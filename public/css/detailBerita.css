@@ -109,6 +109,8 @@ a:hover {
 
 .tanggal {
     color: #39acfc;
+    position: absolute;
+    bottom: 8px;
 }
 
 .btn-warna {
@@ -139,7 +141,7 @@ a:hover {
 }
 
 .card-side {
-    height: 5.9%;
+    height: 8%;
 }
 
 .h6 {

@@ -35,7 +35,7 @@
             <div class="card card-side mb-3 mt-2">
                 <div class="row no-gutters">
                   <div class="col-md-4">
-                    <img src="{{asset('/assets/image/'.$daftarBerita->file) }}" class="card-img" height="75"  alt="...">
+                    <img src="{{asset('/assets/image/'.$daftarBerita->file) }}" class="card-img" height="92"  alt="...">
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">

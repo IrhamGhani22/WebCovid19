@@ -53,7 +53,7 @@
                         <div class=" input-group mb-4 ml-auto mr-auto">
                              <div class="input-group-prepend">
                                  <span class="input-group-text" id="basic-addon2">
-                                      <i class="fas fa-lock"></i>
+                                      <i class="fas fa-unlock"></i>
                                  </span>
                              </div>
                              <input type="password" name="password" class=" form-control scr {{ $errors->has('password') ? 'is-invalid' : ''}}  " placeholder=" Password " aria-label=" Recipient 's password" aria-describedby="basic-addon2">

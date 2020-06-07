@@ -50,11 +50,6 @@
                         <i class="fas fa-hospital text-white ml-4 " style="font-size: 145%; "></i><a class="nav-link d-inline text-white " href="{{url('/hospitalAdmin')}}">HOSPITAL</a>
                     </h6>
                 </li>
-                <li class="nav-item mt-1 pt-3 sliding-underline">
-                    <h6>
-                        <i class="fas fa-exclamation-circle text-white ml-4 " style="font-size: 145%; "></i><a class="nav-link d-inline text-white " href="#">REPORT</a>
-                    </h6>
-                </li>
                 <li class="nav-item mb-2 mt-2 pt-2 profil pb-2 sliding-underline">
                     <h6>
                         <i class="fas fa-envelope text-white ml-4 " style="font-size: 145%; "></i><a class="nav-link d-inline text-white " href="#">PESAN</a>

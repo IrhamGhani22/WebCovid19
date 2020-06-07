@@ -126,5 +126,23 @@ body {
 }
 
 .form-control-file {
-    margin-left: 24%;
+    margin-left: 23.5%;
+}
+
+.img-edit {
+    position: absolute;
+    top: 0;
+    margin-top: 32px;
+    margin-bottom: 10px;
+    margin-left: 76px;
+}
+
+.add {
+    position: absolute;
+    top: 300px;
+    left: 4px;
+}
+
+.row {
+    padding-bottom: 5%;
 }

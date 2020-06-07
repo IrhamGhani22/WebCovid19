@@ -25,6 +25,10 @@ body {
     background: #007abb;
 }
 
+a {
+    text-decoration: none;
+}
+
 .navs {
     height: 3000px;
     position: fixed;
@@ -95,4 +99,25 @@ body {
     right: 15px;
     opacity: 0.4;
     font-size: 90px;
+}
+
+.card {
+    background: #007abb;
+}
+
+.jumbotron {
+    margin-top: 1%;
+    background-color: #39acfc;
+    width: 81%;
+}
+
+.card-covid {
+    width: 96.6%;
+    padding: 2%;
+    margin-bottom: 2%;
+}
+
+.my-4 {
+    width: 96%;
+    margin-left: -1px;
 }
