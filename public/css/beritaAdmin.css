@@ -142,3 +142,7 @@ label input[type="search"] {
 .berita {
     width: 30%;
 }
+
+.isi {
+    overflow-y: scroll;
+}

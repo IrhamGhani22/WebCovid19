@@ -1,5 +1,6 @@
 body {
     font-family: Century Gothic;
+    overflow-x: hidden;
 }
 
 
@@ -26,11 +27,6 @@ a:hover {
     color: #39acfc;
 }
 
-.btn-login {
-    background: #39acfc;
-    border-radius: 5px;
-}
-
 .navbar-toggler {
     color: #39acfc;
 }
@@ -38,15 +34,13 @@ a:hover {
 
 /* CSS Background Home */
 
-.bg-berita {
-    background-image: url('/assets/image/bg-berita.jpg');
+.bg-home {
     background-repeat: no-repeat;
+    position: absolute;
     width: 100%;
-    height: 67%;
+    height: 110%;
     background-size: 100%;
     z-index: -1;
-    margin-top: -6%;
-    padding-bottom: 31%;
 }
 
 
@@ -100,39 +94,55 @@ a:hover {
     transition: all 0s ease;
 }
 
-
-/* CSS Content Berita */
-
-.tanggal {
-    color: #39acfc;
+.wadah {
+    width: 95%;
 }
 
-.btn-warna {
-    color: #ffffff;
-    background: #39acfc;
-    font-weight: bold;
-    border-radius: 20px;
-    position: absolute;
-    bottom: 17px;
+.jumbotron {
+    background: rgb(255, 255, 255);
+    background-image: url("/assets/image/hospital.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 80%;
+    background-size: 100%;
+    padding-bottom: 38%;
+    margin-top: 2%;
+    margin-bottom: -20%;
 }
 
-.btn-warna:hover {
-    color: #ffffff;
-    background: #39acfc;
-    font-weight: bold;
+.garis {
+    width: 93%;
+    border: 1.5px solid #39acfc;
+    margin-top: 5px;
+    margin-bottom: 30px;
 }
 
-.input-group {
-    width: 96%;
+.hospital {
+    margin-left: 715px;
+    margin-top: 205px;
+    color: #086e96;
+}
+
+.fa-plus {
+    margin-top: -15px;
+    margin-left: 360px;
+    color: #086e96;
+}
+
+.cari {
+    background: #ffffff;
+    height: 40px;
+    width: 50px;
+    border-radius: 50px;
+    border-right: none;
+}
+
+.cari:focus {
+    background: #ffffff;
 }
 
 .input-group-text {
-    color: #ffffff;
-    background: #39acfc;
-    border: 1px solid #39acfc;
-}
-
-.pagination {
-    margin-left: 25px;
-    margin-top: 20px;
+    border-radius: 50px;
+    background: #ffffff;
+    border-left: none;
 }

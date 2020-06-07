@@ -10,7 +10,7 @@
 
 <div class="col-md-10 content">
     <h1 class="judul mt-2 ml-2 text-dark"><i class="fas fa-hospital ml-4"></i> HOSPITAL
-    <a class="btn btn-outline-dark tombol" href="{{url('/formHospital')}}">
+    <a class="btn btn-outline-dark tombol" href="{{url('/hospitalAdmin/create')}}">
        <h4 class="d-inline">
            <i class="fas fa-plus"></i>
        </h4> 
@@ -39,6 +39,13 @@
                 <td>{{ $row->Tingkat_rujukan }}</td>
                 <td>
                     <button class="btn btn-success "><i class="fas fa-edit text-white"></i></button>
+                </td>
+                <td>   
+                            <form action="{{ url('/hospitalAdmin',$row->id) }}" method="POST">
+                            @method('DELETE')
+                            @csrf
+                            <button type="submit" class="btn btn-danger "><i class="fas fa-trash text-white"></i></button>
+                            </form>
                 </td>
             </tr>
         @endforeach

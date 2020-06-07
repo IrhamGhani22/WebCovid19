@@ -34,6 +34,7 @@ Route::get('/about', function () {
 });
 
 Route::get('/berita', 'BeritaController@index2');
+Route::get('/berita/search', 'BeritaController@search');
 Route::get('/berita/{id}/detail', 'BeritaController@detail');
 
 Route::get('/detailBerita', function () {
@@ -43,15 +44,20 @@ Route::get('/detailBerita', function () {
 Route::get('/dashboardAdmin', function () {
     return view('dashboardAdmin');
 })->middleware('auth')->name('dashboardAdmin');
-Route::get('/logout', 'AuthController@logout')->middleware('auth')->name('logout');
 
+Route::get('/hospital', function () {
+    return view('hospital');
+});
+Route::get('/logout', 'AuthController@logout')->middleware('auth')->name('logout');
 Route::get('/beritaAdmin', 'BeritaController@index')->middleware('auth')->name('beritaAdmin');
 Route::get('/beritaAdmin/create', 'BeritaController@create')->middleware('auth')->name('beritaAdminCreate');
 Route::post('/beritaAdmin', 'BeritaController@store')->middleware('auth')->name('beritaAdminstore');
 Route::get('/beritaAdmin/{id}/edit', 'BeritaController@edit')->middleware('auth')->name('beritaAdminedit');
 Route::patch('/beritaAdmin/{id}', 'BeritaController@update')->middleware('auth')->name('beritaAdminupdate');
 Route::delete('/beritaAdmin/{id}', 'BeritaController@destroy')->middleware('auth')->name('beritaAdmindestroy');
-
-
 Route::get('/hospitalAdmin', 'RujukController@index')->middleware('auth')->name('hospitalAdmin');
-Route::get('/formHospital', 'RujukController@create')->middleware('auth')->name('formAdmin');
+Route::get('/hospitalAdmin/create', 'RujukController@create')->middleware('auth')->name('formAdmin');
+Route::post('/hospitalAdmin', 'RujukController@store')->middleware('auth')->name('hospitalAdminstore');
+Route::get('/hospitalAdmin/{id}/edit', 'RujukController@edit')->middleware('auth')->name('formAdminedit');
+Route::patch('/hospitalAdmin/{id}', 'RujukController@update')->middleware('auth')->name('formAdminupdate');
+Route::delete('/hospitalAdmin/{id}', 'RujukController@destroy')->middleware('auth')->name('formAdmindestroy');

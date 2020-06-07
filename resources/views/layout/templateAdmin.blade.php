@@ -29,7 +29,7 @@
                         </div>
                         <div class="col-md-8 mr-auto">
                             <h6>
-                                <a class=" nav-link text-white mt-2">{{Auth::user()->name ?? ''}}</a>
+                                <a class=" nav-link text-white mt-2">ADMIN</a>
                             </h6>
                         </div>
                     </div>
