@@ -28,7 +28,7 @@
   </form>
   <div class="row no-gutters ml-auto mr-auto">
   @foreach ($konten as $news)
-    <div class="col-md-4">
+    <div class="col-md-4 mt-4">
       <div class="card ml-auto mr-auto" style="width: 25rem; height: 27rem;">
         <img src="{{ asset('assets/image/'.$news['file']) }}" class="card-img-top"  height="200" alt="...">
         <div class="card-body">
@@ -42,6 +42,14 @@
   </div>
   {{ $konten->appends(Request::all())->links() }}
 </div>
+
+<footer>
+  <div class="container">
+      <div class="row copyright">
+          <p class="font-weight-bold "><i class=" far fa-copyright "></i> 2020 COVID19-INFO | All Rights Reserved </p>
+      </div>
+  </div>
+</footer>
 
 @endsection
 

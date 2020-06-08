@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
+use File;
 
 class RujukController extends Controller
 {
@@ -16,7 +19,7 @@ class RujukController extends Controller
     }
     public function index2()
     {
-        $rujuk = \App\Rujuk::get();
+        $rujuk = \App\Rujuk::paginate(6);
         return view('hospital', compact('rujuk'));
     }
     public function create()
@@ -98,7 +101,7 @@ class RujukController extends Controller
     {
         $search = $request->search;
 
-        $rujuk = \App\Rujuk::where('nm_rumahsakit', 'like', "%" . $search . "%")->paginate(9);
+        $rujuk = \App\Rujuk::where('nm_rumahsakit', 'like', "%" . $search . "%")->paginate(6);
 
         return view('hospital', compact('rujuk'));
     }

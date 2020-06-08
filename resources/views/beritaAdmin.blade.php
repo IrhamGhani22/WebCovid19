@@ -38,7 +38,11 @@
                 <td>{{ $row->Judul }}</td>
                 <td>{{ $row->Pengirim}}</td>
                 <td>{{ $row->Tanggal}}</td>
-                <td>{{ $row->Isi }}</td>
+                <td class="isi_berita">
+                    <div class="scroll">
+                        {{ $row->Isi }}
+                    </div>
+                </td>
                 <td style="border-right: none;">
                     <div class="row">
                         <div class="col-md-6">

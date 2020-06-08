@@ -22,10 +22,9 @@
       @csrf
         <div class="col-md-8">
             <h1 class="ml-3">{{ @$konten->Judul }}</h1>
-            <span class="ml-3 tanggal">{{ @$konten->Tanggal }}</span>
+            <span class="ml-3 mb-3 tanggal">{{ @$konten->Tanggal }}</span>
             <img src="{{ asset('/assets/image/'.$konten->file)}}" class="container mt-2" alt="...">
-            <p class="ml-3 mt-2 isi-berita">{{ @$konten->Isi }}</p>
-            <span class="ml-3">Jakarta, 18 Mei 2020</span><br>
+            <p class="ml-3 mt-2 isi-berita">{{ @$konten->Isi }}</p><br>
             <span  class="ml-3">{{ @$konten->Pengirim }}</span>
         </div>
 
@@ -35,7 +34,7 @@
             <div class="card card-side mb-3 mt-2">
                 <div class="row no-gutters">
                   <div class="col-md-4">
-                    <img src="{{asset('/assets/image/'.$daftarBerita->file) }}" class="card-img" height="92"  alt="...">
+                    <img src="{{asset('/assets/image/'.$daftarBerita->file) }}" class="card-img" height="123"  alt="...">
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">

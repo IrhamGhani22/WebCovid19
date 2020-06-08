@@ -34,6 +34,7 @@
       <script src="{{URL::asset('/assets/bootstrap/js/popper.min.js')}}"></script>
       <script src="{{URL::asset('/assets/bootstrap/js/bootstrap.min.js')}}"></script>
       <script src="{{URL::asset('/assets/bootstrap/js/bootstrap.js')}}"></script>
+      <script src="{{URL::asset('/assets/bootstrap/js/sweetalert2.all.min.js')}}"></script>
       @yield('script')
 </body>
 </html>

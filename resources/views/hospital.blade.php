@@ -44,7 +44,7 @@
 
 <div class="row wadah  ml-auto mr-auto">
     @foreach($rujuk  as $data)
-    <div class="col-md-6">
+    <div class="col-md-6 mt-4">
         <div class="card">
             <div class="row">
                 <div class="col-md-4">
@@ -63,8 +63,16 @@
         </div>
     </div>
     @endforeach
+    {{ $rujuk->appends(Request::all())->links() }}
 </div>
-<br><br><br><br><br>
+
+<footer>
+    <div class="container">
+        <div class="row copyright">
+            <p class="font-weight-bold "><i class=" far fa-copyright "></i> 2020 COVID19-INFO | All Rights Reserved </p>
+        </div>
+    </div>
+  </footer>
     
 @endsection
 

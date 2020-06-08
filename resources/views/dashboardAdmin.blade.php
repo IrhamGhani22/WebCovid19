@@ -20,17 +20,17 @@
                     <div class="row no-gutters">
                         <div class="col-md-2">Positif</div>
                         <div class="col-md-1">:</div>
-                        <div class="col-md-9">{{ $info['positif'] }}</div>
+                        <div class="col-md-8">{{ $info['positif'] }}</div>
                     </div>
                     <div class="row no-gutters">
                         <div class="col-md-2">Meninggal</div>
                         <div class="col-md-1">:</div>
-                        <div class="col-md-9">{{ $info['meninggal'] }}</div>
+                        <div class="col-md-8">{{ $info['meninggal'] }}</div>
                     </div>
                     <div class="row no-gutters">
                         <div class="col-md-2">Sembuh</div>
                         <div class="col-md-1">:</div>
-                        <div class="col-md-9">{{ $info['sembuh'] }}</div>
+                        <div class="col-md-8">{{ $info['sembuh'] }}</div>
                     </div>
                 @endforeach
             </div>
