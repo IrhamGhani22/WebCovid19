@@ -109,22 +109,22 @@
 					<div class="bg-primary box text-white">
 						<div class="row">
 							<div class="col-md-10">
-								<h2 class="pt-3 pb-2 font-weight-bold">Cina</h2>
+								<h2 class="pt-3 pb-2 font-weight-bold">China</h2>
 								<h5 id="data-id">
 									<div class="row no-gutters">
 										<div class="col-md-2">Positif</div>
 										<div class="col-md-1">:</div>
-										<div class="col-md-9"></div>
+										<div class="col-md-9" id="cinapos">Wait...</div>
 									</div>
 									<div class="row no-gutters">
 										<div class="col-md-2">Meninggal</div>
 										<div class="col-md-1">:</div>
-										<div class="col-md-9"></div>
+										<div class="col-md-9" id="cinamat">Wait...</div>
 									</div>
 									<div class="row no-gutters">
 										<div class="col-md-2">Sembuh</div>
 										<div class="col-md-1">:</div>
-										<div class="col-md-9"></div>
+										<div class="col-md-9" id="cinasem">Wait...</div>
 									</div>
 								</h5>
 							</div>
@@ -143,17 +143,17 @@
 									<div class="row no-gutters">
 										<div class="col-md-2">Positif</div>
 										<div class="col-md-1">:</div>
-										<div class="col-md-9"></div>
+										<div class="col-md-9" id="usapos">Wait...</div>
 									</div>
 									<div class="row no-gutters">
 										<div class="col-md-2">Meninggal</div>
 										<div class="col-md-1">:</div>
-										<div class="col-md-9"></div>
+										<div class="col-md-9" id="usamat">Wait...</div>
 									</div>
 									<div class="row no-gutters">
 										<div class="col-md-2">Sembuh</div>
 										<div class="col-md-1">:</div>
-										<div class="col-md-9"></div>
+										<div class="col-md-9" id="usasem">Wait...</div>
 									</div>
 								</h5>
 							</div>
@@ -172,17 +172,17 @@
 									<div class="row no-gutters">
 										<div class="col-md-2">Positif</div>
 										<div class="col-md-1">:</div>
-										<div class="col-md-9"></div>
+										<div class="col-md-9" id="italpo">Wait...</div>
 									</div>
 									<div class="row no-gutters">
 										<div class="col-md-2">Meninggal</div>
 										<div class="col-md-1">:</div>
-										<div class="col-md-9"></div>
+										<div class="col-md-9" id="italmat">Wait...</div>
 									</div>
 									<div class="row no-gutters">
 										<div class="col-md-2">Sembuh</div>
 										<div class="col-md-1">:</div>
-										<div class="col-md-9"></div>
+										<div class="col-md-9" id="italsem">Wait...</div>
 									</div>
 								</h5>
 							</div>
@@ -201,17 +201,17 @@
 									<div class="row no-gutters">
 										<div class="col-md-2">Positif</div>
 										<div class="col-md-1">:</div>
-										<div class="col-md-9"></div>
+										<div class="col-md-9" id="brapo">Wait...</div>
 									</div>
 									<div class="row no-gutters">
 										<div class="col-md-2">Meninggal</div>
 										<div class="col-md-1">:</div>
-										<div class="col-md-9"></div>
+										<div class="col-md-9" id="bramat">Wait...</div>
 									</div>
 									<div class="row no-gutters">
 										<div class="col-md-2">Sembuh</div>
 										<div class="col-md-1">:</div>
-										<div class="col-md-9"></div>
+										<div class="col-md-9" id="brasem">Wait...</div>
 									</div>
 								</h5>
 							</div>
@@ -230,17 +230,17 @@
 									<div class="row no-gutters">
 										<div class="col-md-2">Positif</div>
 										<div class="col-md-1">:</div>
-										<div class="col-md-9"></div>
+										<div class="col-md-9" id="turkpo">Wait...</div>
 									</div>
 									<div class="row no-gutters">
 										<div class="col-md-2">Meninggal</div>
 										<div class="col-md-1">:</div>
-										<div class="col-md-9"></div>
+										<div class="col-md-9" id="turkmat">Wait...</div>
 									</div>
 									<div class="row no-gutters">
 										<div class="col-md-2">Sembuh</div>
 										<div class="col-md-1">:</div>
-										<div class="col-md-9"></div>
+										<div class="col-md-9" id="turksem">Wait...</div>
 									</div>
 								</h5>
 							</div>
@@ -268,6 +268,76 @@
 	$(document).ready(function(){
 
 		semuaData();
+		dataNegara();
+
+		function dataNegara(){
+			$.ajax({
+				url : 'https://coronavirus-19-api.herokuapp.com/countries',
+				success : function(data){
+					try{
+						var json = data;
+						var html = [];
+
+						if(json.length > 0){
+							var i;
+							for(i=0; i<json.length; i++){
+								var dataNegara = json[i];
+								var namaNegara = dataNegara.country;
+
+								if (namaNegara == 'China') {
+									var kasus = dataNegara.cases;
+									var mati = dataNegara.deaths;
+									var sembuh = dataNegara.recovered;
+
+									$('#cinapos').html(kasus);
+									$('#cinamat').html(mati);
+									$('#cinasem').html(sembuh);
+								}
+								else if(namaNegara == 'USA') {
+									var kasus = dataNegara.cases;
+									var mati = dataNegara.deaths;
+									var sembuh = dataNegara.recovered;
+
+									$('#usapos').html(kasus);
+									$('#usamat').html(mati);
+									$('#usasem').html(sembuh);
+								}
+								else if(namaNegara == 'Italy') {
+									var kasus = dataNegara.cases;
+									var mati = dataNegara.deaths;
+									var sembuh = dataNegara.recovered;
+
+									$('#italpo').html(kasus);
+									$('#italmat').html(mati);
+									$('#italsem').html(sembuh);
+								}
+								else if(namaNegara == 'Brazil') {
+									var kasus = dataNegara.cases;
+									var mati = dataNegara.deaths;
+									var sembuh = dataNegara.recovered;
+
+									$('#brapo').html(kasus);
+									$('#bramat').html(mati);
+									$('#brasem').html(sembuh);
+								}
+								else if(namaNegara == 'Turkey') {
+									var kasus = dataNegara.cases;
+									var mati = dataNegara.deaths;
+									var sembuh = dataNegara.recovered;
+
+									$('#turkpo').html(kasus);
+									$('#turkmat').html(mati);
+									$('#turksem').html(sembuh);
+								}
+
+							}
+						}
+					}catch{
+
+					}
+				}
+			});
+		}
 
 		function semuaData(){
 			$.ajax({
@@ -283,7 +353,7 @@
 						$('#mati').html(meninggal);
 						$('#sembuh').html(sembuh);
 					}catch{
-						alert('Error');	
+						alert('Error');
 					}
 				}
 			});
