@@ -26,15 +26,17 @@
         <h3 class="font-weight-bold ml-2">RUMAH SAKIT RUJUKAN COVID-19</h3>
     </div>
     <div class="col-md-6 pr-2">
-        <div class=" input-group mb-2 w-50 float-right ">
-            <input type=" text " name="search" class=" form-control cari" placeholder=" Search " value="{{ old('search') }}" aria-label=" Recipient 's username" aria-describedby="basic-addon2">
-            <div class="input-group-append">
-                <button type="submit" class="input-group-text" id="basic-addon2">
-                    <a class="text-decoration-none text-secondary" href=""><i
-                            class="fas fa-search"></i></a>
-                </button>
+        <form action="{{ url('/hospital/search')}}" method="GET">
+            <div class=" input-group mb-2 w-50 float-right ">
+                <input type=" text " name="search" class=" form-control cari" placeholder=" Search " value="{{ old('search') }}" aria-label=" Recipient 's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button type="submit" class="input-group-text" id="basic-addon2">
+                        <a class="text-decoration-none text-secondary" href=""><i
+                                class="fas fa-search"></i></a>
+                    </button>
+                </div>
             </div>
-        </div>
+        </form>
     </div>
 </div>
 <hr class="garis">
@@ -46,7 +48,7 @@
         <div class="card">
             <div class="row">
                 <div class="col-md-4">
-                    <img src="{{ asset('assets/image/rs-hasansadikin.jpeg') }}" width="200" height="200" alt="">
+                    <img src="{{ asset('assets/image/'.$data['file']) }}" width="200" height="200" alt="">
                 </div>
                 <div class="col-md-8">
                    <h4 class="font-weight-bold mt-2">{{ $data['nm_rumahsakit'] }}</h4>

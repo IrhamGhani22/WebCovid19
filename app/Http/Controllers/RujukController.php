@@ -14,7 +14,8 @@ class RujukController extends Controller
         $rujuk = \App\Rujuk::get();
         return view('hospitalAdmin', compact('rujuk'));
     }
-    public function index2(){
+    public function index2()
+    {
         $rujuk = \App\Rujuk::get();
         return view('hospital', compact('rujuk'));
     }
@@ -37,25 +38,27 @@ class RujukController extends Controller
             $status->file =  $filename;
             $status->save();
 
-        if ($status) {
-            return redirect('/hospitalAdmin')->with('success', 'Rujukan berhasil diunggah');
-        } else {
-            return redirect('/hospitalAdmin/create')->with('error', 'Rujukan gagal diunggah');
-        }
+            if ($status) {
+                return redirect('/hospitalAdmin')->with('success', 'Rujukan berhasil diunggah');
+            } else {
+                return redirect('/hospitalAdmin/create')->with('error', 'Rujukan gagal diunggah');
+            }
         }
     }
-     public function edit(Request $request, $id){
-        
+    public function edit(Request $request, $id)
+    {
+
         $rujuk = \App\Rujuk::find($id);
-        return view('formHospital',compact('rujuk'));
+        return view('formHospital', compact('rujuk'));
         // $data['berita'] = \DB::table('t_rujuk')->find($id);
         // return view('formHospital', $data);
     }
-    public function update(Request $request, $id){
+    public function update(Request $request, $id)
+    {
         $rule = [
-            'img' => '', 
-            'nm_rumahsakit' => 'required', 
-            'Alamat' => 'required' , 
+            'img' => '',
+            'nm_rumahsakit' => 'required',
+            'Alamat' => 'required',
             'Tingkat_rujukan' => 'required'
         ];
 
@@ -64,7 +67,7 @@ class RujukController extends Controller
         $input = $request->all();
 
         $rujuk = \App\Rujuk::find($id);
-        $status = $rujuk -> update($input);
+        $status = $rujuk->update($input);
 
         if ($request->hasFile('file')) {
             $file =  $request->file('file');
@@ -89,5 +92,14 @@ class RujukController extends Controller
         } else {
             return redirect('/hospitalAdmin/create')->with('error', 'Rujukan gagal dihapus');
         }
+    }
+
+    public function search(Request $request)
+    {
+        $search = $request->search;
+
+        $rujuk = \App\Rujuk::where('nm_rumahsakit', 'like', "%" . $search . "%")->paginate(9);
+
+        return view('hospital', compact('rujuk'));
     }
 }
