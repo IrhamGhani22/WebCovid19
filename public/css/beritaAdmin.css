@@ -143,6 +143,12 @@ label input[type="search"] {
     width: 30%;
 }
 
-.isi {
-    overflow-y: scroll;
+.scroll {
+    max-height: 300px;
+    height: 250px;
+}
+
+.isi_berita {
+    height: 100%;
+    overflow: auto;
 }

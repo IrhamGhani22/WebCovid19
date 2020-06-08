@@ -67,11 +67,12 @@
 					</div>
 				</div>
 
+
 				<div class="col-md-12">
 					<div class="bg-primary box text-white">
 						<div class="row">
 							<div class="col-md-10">
-								<h2 class="pt-3 pb-2 font-weight-bold">{{ $info['name'] }}</h2>
+								<h2 class="pt-3 pb-2 font-weight-bold">China</h2>
 								<h5 id="data-id">
 									<div class="row no-gutters">
 										<div class="col-md-2">Positif</div>
@@ -96,6 +97,152 @@
 						</div>
 					</div>
 				</div>
+				<div class="col-md-12 mt-3">
+					<div class="bg-primary box text-white">
+						<div class="row">
+							<div class="col-md-10">
+								<h2 class="pt-3 pb-2 font-weight-bold">{{ $info['name'] }}</h2>
+								<h5 id="data-id">
+									<div class="row no-gutters">
+										<div class="col-md-2">Positif</div>
+										<div class="col-md-1">:</div>
+										<div class="col-md-9"></div>
+									</div>
+									<div class="row no-gutters">
+										<div class="col-md-2">Meninggal</div>
+										<div class="col-md-1">:</div>
+										<div class="col-md-9"></div>
+									</div>
+									<div class="row no-gutters">
+										<div class="col-md-2">Sembuh</div>
+										<div class="col-md-1">:</div>
+										<div class="col-md-9"></div>
+									</div>
+								</h5>
+							</div>
+							<div class="col-md-2">
+								<img src="{{ URL::asset('/assets/image/flag-cina.png')}}" style="width: 150px;">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12 mt-3">
+					<div class="bg-primary box text-white">
+						<div class="row">
+							<div class="col-md-10">
+								<h2 class="pt-3 pb-2 font-weight-bold">Amerika Serikat</h2>
+								<h5 id="data-id">
+									<div class="row no-gutters">
+										<div class="col-md-2">Positif</div>
+										<div class="col-md-1">:</div>
+										<div class="col-md-9"></div>
+									</div>
+									<div class="row no-gutters">
+										<div class="col-md-2">Meninggal</div>
+										<div class="col-md-1">:</div>
+										<div class="col-md-9"></div>
+									</div>
+									<div class="row no-gutters">
+										<div class="col-md-2">Sembuh</div>
+										<div class="col-md-1">:</div>
+										<div class="col-md-9"></div>
+									</div>
+								</h5>
+							</div>
+							<div class="col-md-2">
+								<img src="{{ URL::asset('/assets/image/flag-amerika.png')}}" style="width: 230px; margin-left: -35px;">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12 mt-3">
+					<div class="bg-primary box text-white">
+						<div class="row">
+							<div class="col-md-10">
+								<h2 class="pt-3 pb-2 font-weight-bold">Italia</h2>
+								<h5 id="data-id">
+									<div class="row no-gutters">
+										<div class="col-md-2">Positif</div>
+										<div class="col-md-1">:</div>
+										<div class="col-md-9"></div>
+									</div>
+									<div class="row no-gutters">
+										<div class="col-md-2">Meninggal</div>
+										<div class="col-md-1">:</div>
+										<div class="col-md-9"></div>
+									</div>
+									<div class="row no-gutters">
+										<div class="col-md-2">Sembuh</div>
+										<div class="col-md-1">:</div>
+										<div class="col-md-9"></div>
+									</div>
+								</h5>
+							</div>
+							<div class="col-md-2">
+								<img src="{{ URL::asset('/assets/image/flag-italia.png')}}" style="width: 150px;">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12 mt-3">
+					<div class="bg-primary box text-white">
+						<div class="row">
+							<div class="col-md-10">
+								<h2 class="pt-3 pb-2 font-weight-bold">Brazil</h2>
+								<h5 id="data-id">
+									<div class="row no-gutters">
+										<div class="col-md-2">Positif</div>
+										<div class="col-md-1">:</div>
+										<div class="col-md-9"></div>
+									</div>
+									<div class="row no-gutters">
+										<div class="col-md-2">Meninggal</div>
+										<div class="col-md-1">:</div>
+										<div class="col-md-9"></div>
+									</div>
+									<div class="row no-gutters">
+										<div class="col-md-2">Sembuh</div>
+										<div class="col-md-1">:</div>
+										<div class="col-md-9"></div>
+									</div>
+								</h5>
+							</div>
+							<div class="col-md-2">
+								<img src="{{ URL::asset('/assets/image/flag-brazil.png')}}" style="width: 150px;">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-12 mt-3">
+					<div class="bg-primary box text-white">
+						<div class="row">
+							<div class="col-md-10">
+								<h2 class="pt-3 pb-2 font-weight-bold">Turki</h2>
+								<h5 id="data-id">
+									<div class="row no-gutters">
+										<div class="col-md-2">Positif</div>
+										<div class="col-md-1">:</div>
+										<div class="col-md-9"></div>
+									</div>
+									<div class="row no-gutters">
+										<div class="col-md-2">Meninggal</div>
+										<div class="col-md-1">:</div>
+										<div class="col-md-9"></div>
+									</div>
+									<div class="row no-gutters">
+										<div class="col-md-2">Sembuh</div>
+										<div class="col-md-1">:</div>
+										<div class="col-md-9"></div>
+									</div>
+								</h5>
+							</div>
+							<div class="col-md-2">
+								<img src="{{ URL::asset('/assets/image/flag-turki.png')}}" style="width: 150px;">
+							</div>
+						</div>
+					</div>
+				</div>
+				
 			</div>
 		</div>
 	@endforeach

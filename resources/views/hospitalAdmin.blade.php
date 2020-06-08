@@ -23,11 +23,11 @@
 			<tr>
 				<th>No</th>
 				<th>Foto</th>
-				<th>Nama Rumah Sakit</th>
+				<th style="width: 150px;">Nama Rumah Sakit</th>
                 <th>Alamat</th>
-                <th>Tingkat Rujukan</th>
-                <th>Action</th>
-			</tr>
+                <th style="width: 130px;">Tingkat Rujukan</th>
+                <th class="aksi">Action</th>
+            </tr>
 		</thead>
 		<tbody>
         @foreach ($rujuk as $row)
