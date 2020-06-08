@@ -19,7 +19,7 @@
 			<img class="img-fluid" src="{{ URL::asset('/assets/image/infoCovid.jpg')}}" alt="">
 		</div>
 	</div>
-	@foreach($data as $info)
+	@foreach($dataindo as $info)
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4 mb-3">
@@ -99,12 +99,60 @@
 			</div>
 		</div>
 	@endforeach
+
+	<div class="container">
+		<div class="col-md-12" style="height: 500px;">
+			
+			{!! $chart->container() !!}
+			{!! $chart->script() !!}
+			
+		</div>
+	</div>
+
     <footer>
         <div class="container">
             <div class="row copyright">
-                <p class="font-weight-bold "><i class=" far fa-copyright "></i> 2020 COVID19-INFO | All Rights Reserved </p>
+                <p class="font-weight-bold "><i class=" far fa-copyright "></i> 2020 COVID19-INFO | SMKN 4 BANDUNG </p>
             </div>
         </div>
     </footer>
+@endsection
+
+@section('script')
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" charset="utf-8"></script>
+<script type="text/javascript">
+	/* globals Chart:false, feather:false */
+
+(function () {
+  'use strict'
+
+  feather.replace()
+
+    data: {
+     
+      datasets: [{
+        
+        lineTension: 0,
+        backgroundColor: 'transparent',
+        borderColor: '#007bff',
+        borderWidth: 4,
+        pointBackgroundColor: '#007bff'
+      }]
+    },
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: false
+          }
+        }]
+      },
+      legend: {
+        display: false
+      }
+    }
+  })
+}())
+</script>
 @endsection
 
