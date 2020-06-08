@@ -12,6 +12,12 @@ class InfoController extends Controller
     	$response = Http::get('https://api.kawalcorona.com/indonesia');
     	$data = $response->json();
     	return view('infoCovid', compact('data'));
+
+        if ($response) {
+            return redirect('/beritaAdmin');
+        } else {
+            return redirect('/error')->with('error', 'Berita gagal diunggah');
+        }
     }
      public function infoAdmin()
     {

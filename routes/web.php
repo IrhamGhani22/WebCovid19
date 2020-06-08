@@ -21,6 +21,10 @@ Route::get('/home', function () {
     return view('home');
 });
 
+Route::get('/error', function(){
+	return 'Connection Error';
+});
+
 Route::get('/info', 'InfoController@info');
 
 Route::get('/about', 'ContactUsController@index');
