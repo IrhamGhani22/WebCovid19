@@ -31,12 +31,12 @@
             <div class="row w-75 ml-auto mr-auto">
                 <div class="col-md-6">
                     <p class="pKiri">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus iure expedita veniam dicta, vitae laboriosam perferendis animi asperiores sunt distinctio libero nostrum facilis, ea temporibus, accusantium laborum eum alias est!
+                        Web Covid-Info ini dibuat dengan tujuan sebagai sumber informasi digital mengenai segala bentuk hal-hal yang berkaitan dengan virus covid-19 yang saat ini sangat menggemparkan masyarakat dunia. dengan adanya web ini semoga membantu para masyarakat dan lembaga penting yang membutuhkan data lengkap mengenai covid-19 dalam cakupan internasional, nasional, bahkan provinsi secara real time dan up to date.
                     </p>     
                 </div>
                 <div class="col-md-6">
                     <p class=" pKanan">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus iure expedita veniam dicta, vitae laboriosam perferendis animi asperiores sunt distinctio libero nostrum facilis, ea temporibus, accusantium laborum eum alias est!
+                        Anda juga dapat ikut berkontribusi bersama kami para admin pengembang, dengan cara memberikan laporan yang berkaitan dengan covid-19. Baik itu berita, informasi mengenai rujukan rumah sakit di daerah kalian ataupun masukan mengenai kekurangan & pengembangan bagi web ini demi kenyamanan bersama. Semua itu dapat kalian lakukan melalui form Contact Us yang akan kalian temukan dibawah ini
                     </p>
                 </div>
             </div>
