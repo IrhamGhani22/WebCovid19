@@ -19,7 +19,7 @@
 			<img class="img-fluid" src="{{ URL::asset('/assets/image/infoCovid.jpg')}}" alt="">
 		</div>
 	</div>
-	@foreach($dataindo as $info)
+	
 		<div class="container">
 			<div class="row">
 				<div class="col-md-4 mb-3">
@@ -27,7 +27,7 @@
 						<div class="row">
 							<div class="col-md-6">
 								<h5 >Positif</h5>
-								<h3 class="font-weight-bold" id="terdampak">{{ $info['positif'] }}</h3>
+								<h3 class="font-weight-bold" id="terdampak">Loading...</h3>
 								<h5>Orang</h5>
 							</div>
 							<div class="col-md-4">
@@ -42,7 +42,7 @@
 						<div class="row">
 							<div class="col-md-6">
 								<h5>Meninggal</h5>
-								<h3 class="font-weight-bold" id="mati">{{ $info['meninggal'] }}</h3>
+								<h3 class="font-weight-bold" id="mati">Loading...</h3>
 								<h5>Orang</h5>
 							</div>
 							<div class="col-md-4">
@@ -57,7 +57,7 @@
 						<div class="row">
 							<div class="col-md-6">
 								<h5>Sembuh</h5>
-								<h3 class="font-weight-bold" id="sembuh">{{ $info['sembuh'] }}</h3>
+								<h3 class="font-weight-bold" id="sembuh">Loading...</h3>
 								<h5>Orang</h5>
 							</div>
 							<div class="col-md-4">
@@ -67,29 +67,37 @@
 					</div>
 				</div>
 
+				<div class="container">
+					<div class="col-md-12" style="height: 500px;">
+						{!! $chart->container() !!}
+						{!! $chart->script() !!}
+					</div>
+				</div>
 
 				<div class="col-md-12">
 					<div class="bg-primary box text-white">
 						<div class="row">
 							<div class="col-md-10">
-								<h2 class="pt-3 pb-2 font-weight-bold">China</h2>
+								@foreach($dataindo as $info)
+								<h2 class="pt-3 pb-2 font-weight-bold">{{ $info['name'] }}</h2>
 								<h5 id="data-id">
 									<div class="row no-gutters">
 										<div class="col-md-2">Positif</div>
 										<div class="col-md-1">:</div>
-										<div class="col-md-9"></div>
+										<div class="col-md-9">{{ $info['positif'] }}</div>
 									</div>
 									<div class="row no-gutters">
 										<div class="col-md-2">Meninggal</div>
 										<div class="col-md-1">:</div>
-										<div class="col-md-9"></div>
+										<div class="col-md-9">{{ $info['meninggal'] }}</div>
 									</div>
 									<div class="row no-gutters">
 										<div class="col-md-2">Sembuh</div>
 										<div class="col-md-1">:</div>
-										<div class="col-md-9"></div>
+										<div class="col-md-9">{{ $info['sembuh'] }}</div>
 									</div>
 								</h5>
+								@endforeach
 							</div>
 							<div class="col-md-2">
 								<img src="{{ URL::asset('/assets/img/indonesia.svg')}}" style="width: 150px;">
@@ -101,7 +109,7 @@
 					<div class="bg-primary box text-white">
 						<div class="row">
 							<div class="col-md-10">
-								<h2 class="pt-3 pb-2 font-weight-bold">{{ $info['name'] }}</h2>
+								<h2 class="pt-3 pb-2 font-weight-bold">Cina</h2>
 								<h5 id="data-id">
 									<div class="row no-gutters">
 										<div class="col-md-2">Positif</div>
@@ -242,19 +250,8 @@
 						</div>
 					</div>
 				</div>
-				
 			</div>
 		</div>
-	@endforeach
-
-	<div class="container">
-		<div class="col-md-12" style="height: 500px;">
-			
-			{!! $chart->container() !!}
-			{!! $chart->script() !!}
-			
-		</div>
-	</div>
 
     <footer>
         <div class="container">
@@ -268,38 +265,30 @@
 @section('script')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js" charset="utf-8"></script>
 <script type="text/javascript">
-	/* globals Chart:false, feather:false */
+	$(document).ready(function(){
 
-(function () {
-  'use strict'
+		semuaData();
 
-  feather.replace()
+		function semuaData(){
+			$.ajax({
+				url : 'https://coronavirus-19-api.herokuapp.com/all',
+				success : function(data){
+					try{
+						var json = data;
+						var kasus = data.cases;
+						var meninggal = data.deaths;
+						var sembuh = data.recovered;
 
-    data: {
-     
-      datasets: [{
-        
-        lineTension: 0,
-        backgroundColor: 'transparent',
-        borderColor: '#007bff',
-        borderWidth: 4,
-        pointBackgroundColor: '#007bff'
-      }]
-    },
-    options: {
-      scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero: false
-          }
-        }]
-      },
-      legend: {
-        display: false
-      }
-    }
-  })
-}())
+						$('#terdampak').html(kasus);
+						$('#mati').html(meninggal);
+						$('#sembuh').html(sembuh);
+					}catch{
+						alert('Error');	
+					}
+				}
+			});
+		}
+	});
 </script>
 @endsection
 
