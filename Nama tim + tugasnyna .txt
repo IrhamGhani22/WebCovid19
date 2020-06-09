@@ -1,0 +1,14 @@
+ Daftar Kelompok plus tugasnya
+
+1. Bama Qyandija Deandra (Backend Developer)
+
+Mengerjakan beck end di bagian rujukan, database berita, dan menyambungkan web ke database
+
+2. Muhammad Fadlul Hafidz (FullStuck Fullstuck)
+
+Membantu mengerjakan back end dan front end bila ada error atau ketika ada bug ketika isi data, menambahkan API di web Covid dan membantu backend dan front end
+
+3. Muhammad Irham Abdul Ghani (Front end Developer)
+
+Mebuat tampilan di web agar lebih menarik, membuat tampilan halaman user dan admin, membantu tim menyelesaikan bug 
+
